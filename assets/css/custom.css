@@ -1,0 +1,168 @@
+@font-face {
+  	font-family: "avant-garde";
+  	src: url("../fonts/itcavantgardestd-bold.eot");
+  	src: local("☺"),
+  	url("../fonts/itcavantgardestd-bold.woff") format("woff"),
+  	url("../fonts/itcavantgardestd-bold.ttf") format("truetype");
+}
+
+/** ############### **/
+/** #  CSS PERSO  # **/
+/** ############### **/
+body {
+  background-color: #232323;
+}
+
+.page {
+  margin-top: 6%;
+}
+
+.bigTitle {
+  font-family: "avant-garde", sans-serif;
+  color: #efefef;
+  text-shadow: 2px 2px 0px #909090;
+  margin-bottom: 25px;
+}
+
+#cardJourmagic .view img,
+#cardStructureGonflables44 .view,
+#cardInterminale .view img,
+#cardMyLibrary .view img,
+#cardMyAgenda .view img,
+#cardSARAH .view img,
+#cardTicTacToe .view img,
+#cardKeskonsmar .view img,
+#cardCryptochat .view img {
+  width: 70%;
+  margin-left: 15%;
+}
+#cardJourmagic {
+  background-color: #f44336;
+}
+#cardMyAgenda {
+  background-color: #424242;
+}
+#cardStructureGonflables44 {
+  background-color: #607d8b;
+}
+#cardKeskonsmar {
+  background-color: #00695C;
+}
+#cardCryptochat {
+  background-color: #3f51b5;
+}
+#cardTicTacToe {
+  background-color: #37474F;
+}
+#cardMyLibrary {
+  background-color: #9e9e9e;
+}
+#cardSARAH {
+  background-color: #633d55;
+}
+#cardInterminale {
+  background-color: #344a5d;
+}
+
+#cardStudies .card-block {
+  padding: 0;
+}
+#cardStudies .card-title {
+  padding: 1.25rem 1.25em 0 1em;
+}
+#cardStudies .card-panel {
+  margin-bottom: 0;
+  margin-top: 0;
+  border-radius: 0;
+  position: relative;
+}
+#cardStudies .card-panel p {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.badge {
+    font-size: 90%;
+}
+.badge.grey {
+  color: #232323;
+}
+
+/** #################### **/
+/** #  CSS MDB CUSTOM  # **/
+/** #################### **/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #232323;
+  z-index: 9998;
+  height: 100%;
+  width: 100%;
+}
+
+.card, .card-overlay {
+  margin: 2em 0;
+}
+.card .card-block {
+    background-color: #ffffff;
+}
+.card.card-dark .card-block {
+    background-color: #333333;
+}
+.card .media img {
+  width: 60px;
+  border-radius: 50%;
+}
+.card-overlay {
+  height: auto;
+}
+
+.min-chart {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/** ########################## **/
+/** #  CSS Librairie JS GRID # **/
+/** ########################## **/
+.bricklayer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.bricklayer-column-sizer {
+  width: 100%;
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .bricklayer-column-sizer {
+    width: 50%;
+  }
+}
+
+.bricklayer-column {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 13px;
+  padding-right: 13px;
+}
