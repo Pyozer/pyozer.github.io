@@ -22,11 +22,10 @@
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86333875-2"></script>
       <script>
- 	window.dataLayer = window.dataLayer || [];
-  	function gtag(){dataLayer.push(arguments);}
-  	gtag('js', new Date());
-
-    	gtag('config', 'UA-86333875-2');
+      window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    	  gtag('config', 'UA-86333875-2');
       </script>
     </head>
     <body>
@@ -75,7 +74,7 @@
                 </div>
               </div>
             </div>
-            <h4 class="white-text" style="margin-top: 50px;margin-right: -7px;">Chargement...<br /><br /><small>(Hébergé sur un Raspberry Pi)</h4>
+            <h4 class="white-text" style="margin-top: 50px;margin-right: -7px;">Chargement...</h4>
           </div>
         </div>
       </div>
@@ -93,7 +92,7 @@
                     </div>
                     <!--Avatar-->
                     <div class="avatar">
-                      <img src="assets/img/img_profil.jpg" class="rounded-circle img-responsive">
+                      <img src="assets/img/img_profil.png" class="rounded-circle img-responsive">
                     </div>
                     <div class="card-block">
                         <!--Name-->
@@ -113,12 +112,12 @@
                     <hr>
                     <!--Text-->
                     <p class="card-text">
-                    	Je m'appelle <span class="badge grey lighten-1">Jean-Charles Moussé</span>, j'ai 19 ans. Je suis étudiant en 2ème année de <span class="badge grey lighten-1">DUT Informatique</span> à l'IUT de Laval (53).
+                      Je m'appelle <span class="badge blue">Jean-Charles Moussé</span>, j'ai 19 ans.<br />
+                      Je suis étudiant en 2ème année de <span class="badge blue">DUT Informatique</span> à l'IUT de Laval (53).
                     </p>
                     <p class="card-text">
-                    	Depuis tout petit je m'interesse à l'informatique, des <span class="badge grey lighten-1">nouvelles technologies</span> en générales. Il y a 5 ans environ j'ai commencé à programmer, des <span class="badge grey lighten-1">sites</span> puis des applications <span class="badge grey lighten-1">Android</span> notamment.
+                    	Depuis tout petit je m'interesse à l'informatique, des <span class="badge blue">nouvelles technologies</span> en générales. En  j'ai commencé à programmer, des <span class="badge blue">sites web</span> puis des applications <span class="badge blue">Android</span> notamment.
                     </p>
-                    <a href="" class="link-text"><h5>En savoir plus <i class="fa fa-chevron-right"></i></h5></a>
                   </div> <!--/.Card content-->
                 </div> <!--/.Card Dark-->
 
@@ -129,10 +128,17 @@
                     <!--Title-->
                     <h4 class="card-title">Mes études</h4>
 
+                    <div class="card-panel blue darken-2 z-depth-2" style="z-index: 13;">
+                      <span class="white-text">Efreitech - Rentrée Sept. 2018</span><br>
+                      <p>
+                        <small class="white-text"><cite>(Sept. 2018 - 2020)</cite></small>
+                      </p>
+                    </div>
+
                     <div class="card-panel unique-color z-depth-2" style="z-index: 12;">
                       <span class="white-text">IUT de Laval - DUT Informatique</span><br>
                       <p>
-                        <small class="white-text"><cite>(2016 - Maintenant)</cite></small>
+                        <small class="white-text"><cite>(Sept. 2016 - Maintenant)</cite></small>
                       </p>
                     </div>
 
@@ -155,59 +161,74 @@
                     <hr>
                     <!--Text-->
                     <div class="row text-center">
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_html" data-percent="85"><span class="percent"></span></span>
-                        <h5><span class="badge red">HTML</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_html">
+                        <span class="min-chart" data-percent="80"><span class="percent"></span></span>
+                        <h5><span class="badge">HTML</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_css" data-percent="70"><span class="percent"></span></span>
-                        <h5><span class="badge blue">CSS</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_css">
+                        <span class="min-chart"  data-percent="70"><span class="percent"></span></span>
+                        <h5><span class="badge">CSS</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_js" data-percent="65"><span class="percent"></span></span>
-                        <h5><span class="badge yellow darken-3">JavaScript</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_js">
+                        <span class="min-chart" data-percent="65"><span class="percent"></span></span>
+                        <h5><span class="badge">JavaScript</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_php" data-percent="80"><span class="percent"></span></span>
-                        <h5><span class="badge purple darken-3">PHP</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_node">
+                        <span class="min-chart" data-percent="60"><span class="percent"></span></span>
+                        <h5><span class="badge">Node.JS</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_sql" data-percent="65"><span class="percent"></span></span>
-                        <h5><span class="badge green darken-2">SQL</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_react">
+                        <span class="min-chart" data-percent="40"><span class="percent"></span></span>
+                        <h5><span class="badge">React</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_java" data-percent="70"><span class="percent"></span></span>
-                        <h5><span class="badge red darken-2">Java</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_php">
+                        <span class="min-chart" data-percent="75"><span class="percent"></span></span>
+                        <h5><span class="badge">PHP</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_c" data-percent="20"><span class="percent"></span></span>
-                        <h5><span class="badge purple darken-5">C#</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_sql">
+                        <span class="min-chart" data-percent="65"><span class="percent"></span></span>
+                        <h5><span class="badge">SQL</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_linux" data-percent="40"><span class="percent"></span></span>
-                        <h5><span class="badge grey">Linux</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_java">
+                        <span class="min-chart" data-percent="70"><span class="percent"></span></span>
+                        <h5><span class="badge">Java</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_android" data-percent="65"><span class="percent"></span></span>
-                        <h5><span class="badge light-green darken-1">Android</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_c">
+                        <span class="min-chart" data-percent="10"><span class="percent"></span></span>
+                        <h5><span class="badge">C#</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4">
-                        <span class="min-chart" id="chart_node" data-percent="50"><span class="percent"></span></span>
-                        <h5><span class="badge orange darken-3">Node.JS</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_cpp">
+                        <span class="min-chart" data-percent="35"><span class="percent"></span></span>
+                        <h5><span class="badge">C++</span></h5>
                       </div>
 
-                      <div class="col-6 col-lg-4 offset-3 offset-lg-0">
-                        <span class="min-chart" id="chart_git" data-percent="50"><span class="percent"></span></span>
-                        <h5><span class="badge light-orange darken-1">Git</span></h5>
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_linux">
+                        <span class="min-chart" data-percent="60"><span class="percent"></span></span>
+                        <h5><span class="badge">Linux</span></h5>
+                      </div>
+
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_android">
+                        <span class="min-chart" data-percent="65"><span class="percent"></span></span>
+                        <h5><span class="badge">Android</span></h5>
+                      </div>
+
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_swift">
+                        <span class="min-chart" data-percent="65"><span class="percent"></span></span>
+                        <h5><span class="badge">Swift</span></h5>
+                      </div>
+
+                      <div class="col-6 col-md-4 col-lg-3" id="chart_git">
+                        <span class="min-chart" data-percent="50"><span class="percent"></span></span>
+                        <h5><span class="badge">Git</span></h5>
                       </div>
                     </div>
                   </div> <!--/.Card content-->
@@ -438,23 +459,32 @@
 
           /* Charts */
           function setChartPercent(elem, color) {
-            $('.min-chart' + elem).easyPieChart({
+            $(elem + ' .min-chart').easyPieChart({
               barColor: color,
               onStep: function (from, to, percent) {
                 $(this.el).find('.percent').text(Math.round(percent));
               }
             });
+            $(elem + ' span.badge').css('background-color', color);
           }
-          setChartPercent('#chart_html', "#e54f27");
-          setChartPercent('#chart_css', "#2aa9e0");
-          setChartPercent('#chart_js', "#fdda3e");
-          setChartPercent('#chart_node', "#ef6c00");
-          setChartPercent('#chart_php', "#777bb3");
-          setChartPercent('#chart_sql', "#4caf50");
-          setChartPercent('#chart_java', "#e9232e");
-          setChartPercent('#chart_c', "#68217a");
-          setChartPercent('#chart_linux', "#9e9e9e");
-          setChartPercent('#chart_android', "#a7c93c");
+
+          // WEB
+          setChartPercent('#chart_html', "#e44d26");
+          setChartPercent('#chart_css', "#379ad6");
+          setChartPercent('#chart_js', "#ffc84e");
+          setChartPercent('#chart_node', "#83cd28");
+          setChartPercent('#chart_react', "#61dafb")
+
+          setChartPercent('#chart_php', "#7679b0");
+          setChartPercent('#chart_sql', "#0073c1");
+          setChartPercent('#chart_java', "#e01e21");
+          setChartPercent('#chart_c', "#813787");
+
+          setChartPercent('#chart_cpp', "#0180cd");
+          setChartPercent('#chart_linux', "#f4ac00");
+          setChartPercent('#chart_android', "#78c259");
+          setChartPercent('#chart_swift', "#fc983a");
+          
           setChartPercent('#chart_git', "#f05033");
 
 			    var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
