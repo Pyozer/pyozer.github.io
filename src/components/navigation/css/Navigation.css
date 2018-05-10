@@ -1,0 +1,21 @@
+.navigation_header {
+    background-color: #111111;
+    padding: 16px;
+}
+
+.navigation_header h2 {
+    color: #fff;
+    margin: 0;
+}
+
+.navigation_slider_fixed {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.navigation_icon {
+    font-size: 20px !important;
+}
