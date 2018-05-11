@@ -5,9 +5,7 @@ import Loader from './components/loader/Loader';
 import Navigation from './components/navigation/Navigation';
 
 import HomePage from './pages/HomePage';
-
-import { Layout, Breadcrumb } from 'antd';
-const { Content, Footer } = Layout;
+import About from './pages/About';
 
 class App extends Component {
 
@@ -18,46 +16,36 @@ class App extends Component {
   }  
 
   componentDidMount() {
-    this.setState({ isLoading: false })
+    setTimeout(() => {
+      this.setState({ isLoading: false })
+    }, 1000)
   }
 
   render() {
-    if(this.state.isLoading)
-      return <Loader />
-
     return (
       <Router>
-        <Layout>
-          <Navigation />
-          <Layout>
-              <Content style={{ margin: '0 16px' }}>
-                  <Breadcrumb style={{ margin: '16px 0' }}>
-                      <Breadcrumb.Item>Accueil</Breadcrumb.Item>
-                      <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                  </Breadcrumb>
-
-                  <Switch>
-                    <Route exact path="/" component={HomePage} />
-                    <Route path="/home" component={HomePage} />
-                    <Route component={NoMatch} />
-                  </Switch>
-              </Content>
-              <Footer style={{ textAlign: 'center' }}>
-                  Ant Design ©2016 Created by Ant UED
-              </Footer>
-          </Layout>
-          </Layout>
+          <div>
+            <Navigation />
+            { this.state.isLoading ? (
+              <Loader />
+            ) : (
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/home" component={HomePage} />
+                <Route path="/about" component={About} />
+                <Route component={NoMatch} />
+              </Switch>
+            )}
+          </div>
         </Router>
     );
   }
 }
 
 const NoMatch = ({ location }) => (
-  <div>
-    <h3>
-      No match for <code>{location.pathname}</code>
-    </h3>
-  </div>
+  <h3 className="text-white">
+    No match for <code>{location.pathname}</code>
+  </h3>
 );
 
 export default App;
