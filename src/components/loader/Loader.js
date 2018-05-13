@@ -1,10 +1,10 @@
 import React from 'react';
-import './css/Loader.css';
+import CenterElement from '../CenterElement';
 
 const Loader = () => (
-    <div className="loader_container">
-        <h1 className="loader_text">Loading...</h1>
-    </div>
+    <CenterElement className="p-3">
+        <h1>Loading...</h1>
+    </CenterElement>
 );
 
 export default Loader;

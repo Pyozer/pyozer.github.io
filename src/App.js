@@ -6,6 +6,7 @@ import Navigation from './components/navigation/Navigation';
 
 import HomePage from './pages/HomePage';
 import About from './pages/About';
+import PageNotFound from './pages/PageNotFound';
 
 class App extends Component {
 
@@ -24,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-          <div>
+          <div className="d-flex flex-column h-100">
             <Navigation />
             { this.state.isLoading ? (
               <Loader />
@@ -32,7 +33,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={About} />
-                <Route component={NoMatch} />
+                <Route component={PageNotFound} />
               </Switch>
             )}
           </div>
@@ -40,11 +41,5 @@ class App extends Component {
     );
   }
 }
-
-const NoMatch = ({ location }) => (
-  <h3 className="text-white">
-    No match for <code>{location.pathname}</code>
-  </h3>
-);
 
 export default App;
