@@ -31,7 +31,6 @@ class App extends Component {
             ) : (
               <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route path="/home" component={HomePage} />
                 <Route path="/about" component={About} />
                 <Route component={NoMatch} />
               </Switch>
