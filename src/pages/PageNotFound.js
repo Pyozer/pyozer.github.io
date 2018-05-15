@@ -4,12 +4,11 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import CenterElement from '../components/CenterElement';
 
 const PageNotFound = ({ location }) => (
-    <CenterElement className="m-5">
-        <h1 className="display-1 font-weight-bold text-shadow-effect mb-5">404</h1>
-        <h2 className="display-4 font-weight-normal">Looks like you're lost</h2>
-        <h3 className="font-weight-light mb-5">The page you are looking for not available !</h3>
+    <CenterElement className="mt-3 mt-md-5 p-5 text-center">
+        <h1 class="display-3 text-primary font-weight-normal">Page not <span class="font-weight-bold">found</span></h1>
+        <h3 className="font-weight-light mb-5 mt-3">Oops! Looks like you followed a bad link.</h3>
 
-        <Link to="/" className="btn btn-outline-light btn-lg py-3 px-5 border-transparent">
+        <Link to="/" className="btn btn-outline-primary btn-lg btn-rounded py-3 px-5 mt-4">
             <strong>GO TO HOME</strong> <FontAwesomeIcon icon={["fas", "arrow-right"]} className="ml-2" />
         </Link>
     </CenterElement>

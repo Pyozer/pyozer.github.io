@@ -20,36 +20,34 @@ class HomePage extends Component {
 
     render() {
         return (
-            <CenterElement className="p-3 p-md-5 text-center">
-                <div class="row">
-                    <div class="col-12 col-md-8 col-xl-5 mx-auto my-5">
-                        <ImageProfil className="rounded-circle shadow" width="160" />
-                        
-                        <h1 class="display-4 mt-4">
-                            Hi, I'm
-                            <br />
-                            <Typist startDelay="1000" onTypingDone={this.onHeaderTyped}>
-                                <strong className="font-weight-bold">Jean-Charles Moussé</strong>.
-                            </Typist>
-                        </h1>
-                        <p class="lead mt-4">
-                            I have a large interest in programming and I love to apply my skills to my personal projects.     
-                        </p>
+            <CenterElement className="mt-3 mt-md-5 p-5">
+                <div class="text-center">
+                    <ImageProfil className="rounded-circle shadow" width="160" />
+                    
+                    <h1 class="display-4 mt-4">
+                        Hi, I'm
+                        <br />
+                        <Typist startDelay="1000" onTypingDone={this.onHeaderTyped} className="text-primary">
+                            <strong className="font-weight-bold">Jean-Charles Moussé</strong>
+                        </Typist>
+                    </h1>
+                    <p class="lead mt-4">
+                        I have a large interest in programming and I love to apply my skills to my personal projects.     
+                    </p>
 
-                        <div class="mt-5 d-flex justify-content-between social_link">
-                            <a href="https://github.com/Pyozer/" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={["fab", "github"]} size="2x" className="text-white" />
-                            </a>
-                            <a href="https://twitter.com/jc_mousse/" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" className="text-white" />
-                            </a>
-                            <a href="https://www.facebook.com/jeancharles.mousse" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" className="text-white" />
-                            </a>
-                            <a href="https://www.instagram.com/j_mousse/" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" className="text-white" />
-                            </a>
-                        </div>
+                    <div class="mt-5 d-flex justify-content-between social_link">
+                        <a href="https://github.com/Pyozer/" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={["fab", "github"]} size="2x" className="text-dark" />
+                        </a>
+                        <a href="https://twitter.com/jc_mousse/" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" className="text-dark" />
+                        </a>
+                        <a href="https://www.facebook.com/jeancharles.mousse" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" className="text-dark" />
+                        </a>
+                        <a href="https://www.instagram.com/j_mousse/" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" className="text-dark" />
+                        </a>
                     </div>
                 </div>
             </CenterElement>

@@ -7,6 +7,7 @@ import Navigation from './components/navigation/Navigation';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import PageNotFound from './pages/PageNotFound';
+import Contact from './pages/Contact';
 
 class App extends Component {
 
@@ -25,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-          <div className="d-flex flex-column h-100">
+          <div>
             <Navigation />
             { this.state.isLoading ? (
               <Loader />
@@ -33,6 +34,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
                 <Route component={PageNotFound} />
               </Switch>
             )}
