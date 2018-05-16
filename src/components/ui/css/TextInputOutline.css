@@ -1,0 +1,11 @@
+.form-group-outline label {
+    position: absolute;
+    top: -12px;
+    left: 31px;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.form-group-outline .form-control {
+    padding: 1.2em 1.45em;
+}

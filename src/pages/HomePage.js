@@ -37,16 +37,16 @@ class HomePage extends Component {
 
                     <div class="mt-5 d-flex justify-content-between social_link">
                         <a href="https://github.com/Pyozer/" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={["fab", "github"]} size="2x" className="text-dark" />
+                            <FontAwesomeIcon icon={["fab", "github"]} size="3x" className="text-dark" />
                         </a>
                         <a href="https://twitter.com/jc_mousse/" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" className="text-dark" />
+                            <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" className="text-dark" />
                         </a>
                         <a href="https://www.facebook.com/jeancharles.mousse" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" className="text-dark" />
+                            <FontAwesomeIcon icon={["fab", "facebook"]} size="3x" className="text-dark" />
                         </a>
                         <a href="https://www.instagram.com/j_mousse/" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" className="text-dark" />
+                            <FontAwesomeIcon icon={["fab", "instagram"]} size="3x" className="text-dark" />
                         </a>
                     </div>
                 </div>

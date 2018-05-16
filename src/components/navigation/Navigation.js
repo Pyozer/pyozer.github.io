@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-
 import './css/Navigation.css';
 
 class Navigation extends Component { 
-    
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-light bg-white shadow py-0">
