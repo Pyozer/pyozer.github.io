@@ -11,6 +11,7 @@ body {
   color: #222222;
 }
 
+/** EFFECTS **/
 .text-shadow-effect {
   font-size: 9em;
   -webkit-transition: all .1s linear;
@@ -30,14 +31,32 @@ body {
   transition: all .1s linear;
 }
 
+/** BORDER **/
 .border-transparent {
   border: none;
 }
 
+/** BUTTONS **/
 .btn-rounded {
   border-radius: 50px;
 }
 
+.btn-primary-air {
+  color: #377dff;
+  background: rgba(55, 125, 255, 0.1);
+  border-color: transparent;
+}
+
+.form-control {
+  padding: 0.75em 1em;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+
+/** LAYOUT **/
 .mt-6 {
   margin-top: 6em;
 }
