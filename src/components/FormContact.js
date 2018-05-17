@@ -20,7 +20,7 @@ class FormContact extends Component {
                 <div class="row mb-4">
                     <TextAreaOutline className="col-12" type="text" id="inputMessage" placeholder="Write your message..." label="Message" required />
                 </div>
-                <button type="submit" class="btn btn-outline-primary btn-rounded transition-3d-hover btn-lg px-5 py-3 font-weight-bold">
+                <button type="submit" class="btn btn-outline-primary btn-rounded w-100 w-sm-auto transition-3d-hover btn-lg px-5 py-3 font-weight-bold">
                     Send message <FontAwesomeIcon icon={["fab", "telegram-plane"]} className="ml-2"/>
                 </button>
             </form>
