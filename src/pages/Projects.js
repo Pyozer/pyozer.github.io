@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContainerTitle from '../components/ui/ContainerTitle';
+import Gallery from '../components/images/Gallery';
 import { withTitle } from '../Context';
 
 var projects = [
@@ -13,45 +14,20 @@ var projects = [
 
 ];
 
+var buttonsCat = [
+    { title: "All", category: "" },
+    { title: "Web", category: "web" },
+    { title: "Android", category: "android" },
+    { title: "iOS", category: "ios" },
+    { title: "Logiciel", category: "software" },
+];
+
 class Projects extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {elems: projects, category: "all"};
-    }
-
-    toggleCategory(newCategory) {
-        this.setState({ category: newCategory })
-    }
-
+    
     render() {
-        let baseClass = "btn transition-3d-hover mx-3 px-5";
-        let classBtn = baseClass + " btn-outline-primary";
-        let activeBtn = baseClass + " btn-primary";
-
-        let category = this.state.category;
         return (
             <ContainerTitle title="Projects">
-                <div className="flex-column flex-sm-row justify-content-center w-50 mx-auto py-3">
-                    <button onClick={(e) => this.toggleCategory("all")} className={(category === "all" ? activeBtn : classBtn)}>All</button>
-                    <button onClick={(e) => this.toggleCategory("web")} className={(category === "web" ? activeBtn : classBtn)}>Web</button>
-                    <button onClick={(e) => this.toggleCategory("android")} className={(category === "android" ? activeBtn : classBtn)}>Android</button>
-                </div>
-                <div className="row">
-                    {this.state.elems.map((item, index) => {
-                        if(category === "all" || category === item.category)
-                            return (
-                                <div className="col-12 col-sm-6 col-md-4 col-lg-3 py-2" key={index}>
-                                    <img src={item.img} className="rounded img-fluid" alt={item.title} />
-                                    <div className="py-3">
-                                        <h4 className="h6 text-dark mb-0">{item.title}</h4>
-                                        <p className="small mb-0">{item.subtitle}</p>
-                                    </div>
-                                </div>
-                            )
-                        return null;
-                    })}
-                </div>
+                <Gallery elems={projects} buttons={buttonsCat} />
             </ContainerTitle>
         );
     }
