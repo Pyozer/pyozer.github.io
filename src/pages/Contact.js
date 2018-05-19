@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import FormContact from '../components/FormContact';
 import ContainerTitle from '../components/ui/ContainerTitle';
+import { withTitle } from '../Context';
 
 
 class Contact extends Component {
@@ -14,4 +15,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default withTitle(Contact, "Contact");

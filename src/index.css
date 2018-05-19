@@ -11,6 +11,10 @@ body {
   color: #222222;
 }
 
+a {
+  outline: 0;
+}
+
 /** EFFECTS **/
 .text-shadow-effect {
   transition: all .1s linear;
@@ -44,6 +48,12 @@ body {
   color: #377dff;
   background: rgba(55, 125, 255, 0.1);
   border-color: transparent;
+}
+
+.btn-primary-air:hover, .btn-primary-air:focus, .btn-primary-air:active, .btn-primary-air.active {
+  color: #fff;
+  background: #377dff;
+  box-shadow: 0 4px 17px rgba(55, 125, 255, 0.35);
 }
 
 .form-control {

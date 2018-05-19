@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import CenterElement from '../components/CenterElement';
+import { withTitle } from '../Context';
 
 const PageNotFound = ({ location }) => (
     <CenterElement className="mt-3 mt-md-5 p-5 text-center">
@@ -14,4 +15,4 @@ const PageNotFound = ({ location }) => (
     </CenterElement>
 );
 
-export default PageNotFound;
+export default withTitle(PageNotFound, "Error 404");

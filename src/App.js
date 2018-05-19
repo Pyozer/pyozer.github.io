@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import PageNotFound from './pages/PageNotFound';
 import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ class App extends Component {
     super(props);
 
     this.state = { isLoading: true }
-  }  
+  }
 
   componentDidMount() {
     setTimeout(() => {
@@ -34,6 +35,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={About} />
+                <Route path="/projects" component={Projects} />
                 <Route path="/contact" component={Contact} />
                 <Route component={PageNotFound} />
               </Switch>

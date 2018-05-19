@@ -1,5 +1,6 @@
 import React from 'react';
 import ContainerTitle from '../components/ui/ContainerTitle';
+import { withTitle } from '../Context';
 
 const About = () => (
     <ContainerTitle title="About me">
@@ -15,4 +16,4 @@ const About = () => (
     </ContainerTitle>
 );
 
-export default About;
+export default withTitle(About, "About");

@@ -7,6 +7,7 @@ import 'react-typist/dist/Typist.css';
 
 import './css/HomePage.css';
 import CenterElement from '../components/CenterElement';
+import { withTitle } from '../Context';
 
 class HomePage extends Component {
     
@@ -27,7 +28,7 @@ class HomePage extends Component {
                     <h1 class="display-4 mt-4">
                         Hi, I'm
                         <br />
-                        <Typist startDelay="1000" onTypingDone={this.onHeaderTyped} className="text-primary">
+                        <Typist startDelay="1000" onTypingDone={this.onHeaderTyped} cursor={{element: "|||||"}} className="text-primary">
                             <strong className="font-weight-bold">Jean-Charles Moussé</strong>
                         </Typist>
                     </h1>
@@ -55,4 +56,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default withTitle(HomePage, "Home");

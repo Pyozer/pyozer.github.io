@@ -10,4 +10,5 @@
 
 .Typist .Cursor--blinking {
     width: 0px;
+    letter-spacing: -9px;
 }
