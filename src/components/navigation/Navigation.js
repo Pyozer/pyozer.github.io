@@ -34,7 +34,7 @@ class Navigation extends Component {
                         <ul className="navbar-nav mx-auto">
                             {
                                 ListNavItem.map((item, i) =>
-                                    <li className="nav-item"> 
+                                    <li className="nav-item" key={i}> 
                                         <NavLink activeClassName="active" className="nav-link py-4 px-2 px-md-4 px-lg-5" exact to={item.to}>{item.title}</NavLink>
                                     </li>
                                 )

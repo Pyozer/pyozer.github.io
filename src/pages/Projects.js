@@ -41,14 +41,15 @@ class Projects extends Component {
                     {this.state.elems.map((item, index) => {
                         if(category === "all" || category === item.category)
                             return (
-                                <div className="col-12 col-sm-6 col-md-4 col-lg-3 py-2">
-                                    <img src={item.img} className="rounded img-fluid" />
+                                <div className="col-12 col-sm-6 col-md-4 col-lg-3 py-2" key={index}>
+                                    <img src={item.img} className="rounded img-fluid" alt={item.title} />
                                     <div className="py-3">
                                         <h4 className="h6 text-dark mb-0">{item.title}</h4>
                                         <p className="small mb-0">{item.subtitle}</p>
                                     </div>
                                 </div>
                             )
+                        return null;
                     })}
                 </div>
             </ContainerTitle>
