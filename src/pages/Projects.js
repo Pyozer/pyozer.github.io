@@ -25,14 +25,17 @@ class Projects extends Component {
     }
 
     render() {
-        const classBtn = "btn btn-primary-air transition-3d-hover mx-3 px-5";
-        const category = this.state.category;
+        let baseClass = "btn transition-3d-hover mx-3 px-5";
+        let classBtn = baseClass + " btn-outline-primary";
+        let activeBtn = baseClass + " btn-primary";
+
+        let category = this.state.category;
         return (
             <ContainerTitle title="Projects">
                 <div className="flex-column flex-sm-row justify-content-center w-50 mx-auto py-3">
-                    <button onClick={(e) => this.toggleCategory("all")} className={classBtn + (category === "all" ? " active" : "")}>All</button>
-                    <button onClick={(e) => this.toggleCategory("web")} className={classBtn + (category === "web" ? " active" : "")}>Web</button>
-                    <button onClick={(e) => this.toggleCategory("android")} className={classBtn + (category === "android" ? " active" : "")}>Android</button>
+                    <button onClick={(e) => this.toggleCategory("all")} className={(category === "all" ? activeBtn : classBtn)}>All</button>
+                    <button onClick={(e) => this.toggleCategory("web")} className={(category === "web" ? activeBtn : classBtn)}>Web</button>
+                    <button onClick={(e) => this.toggleCategory("android")} className={(category === "android" ? activeBtn : classBtn)}>Android</button>
                 </div>
                 <div className="row">
                     {this.state.elems.map((item, index) => {
