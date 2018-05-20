@@ -1,36 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import ContainerTitle from '../components/ui/ContainerTitle';
 import Gallery from '../components/images/Gallery';
+import GitHubContribution from '../components/images/GitHubContribution';
+
+import Project from './Project';
+
 import { withTitle } from '../Context';
+import { ProjectsData, ProjectsCategory } from '../api/ProjectsData';
 
-var projects = [
-    { img: "https://htmlstream.com/preview/front-v1.1/assets/img/380x360/img29.jpg", title: "Projet 1", subtitle: "Description courte", category: "web" },
-    { img: "https://htmlstream.com/preview/front-v1.1/assets/img/380x360/img6.jpg", title: "Projet 2", subtitle: "Description courte", category: "web" },
-    { img: "https://htmlstream.com/preview/front-v1.1/assets/img/380x360/img1.jpg", title: "Projet 3", subtitle: "Description courte", category: "web" },
-
-    { img: "https://htmlstream.com/preview/front-v1.1/assets/img/380x360/img30.jpg", title: "Projet 4", subtitle: "Description courte", category: "android" },
-    { img: "https://htmlstream.com/preview/front-v1.1/assets/img/380x360/img26.jpg", title: "Projet 5", subtitle: "Description courte", category: "android" },
-    { img: "https://htmlstream.com/preview/front-v1.1/assets/img/380x360/img2.jpg", title: "Projet 6", subtitle: "Description courte", category: "android" }
-
-];
-
-var buttonsCat = [
-    { title: "All", category: "" },
-    { title: "Web", category: "web" },
-    { title: "Android", category: "android" },
-    { title: "iOS", category: "ios" },
-    { title: "Logiciel", category: "software" },
-];
-
-class Projects extends Component {
-    
-    render() {
-        return (
-            <ContainerTitle title="Projects">
-                <Gallery elems={projects} buttons={buttonsCat} />
-            </ContainerTitle>
-        );
-    }
-}
+const Projects = ({ match }) => (
+    <Switch>
+        <Route path="/projects/:projectId" component={Project} />
+        <Route exact path="/projects" render={ () =>
+            <div>
+                <ContainerTitle title="Projects">
+                    <Gallery elems={ProjectsData} buttons={ProjectsCategory} baseUrl="/projects/" colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" />
+                </ContainerTitle>
+                <ContainerTitle title="Activity">
+                    <GitHubContribution username="Pyozer" theme="standard"/>
+                </ContainerTitle>
+            </div>
+        } />
+    </Switch>
+);
 
 export default withTitle(Projects, "Projects");
