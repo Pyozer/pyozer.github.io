@@ -6,6 +6,7 @@
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.7",
     "@fortawesome/react-fontawesome": "0.0.19",
+    "firebase": "^5.0.3",
     "github-contributions-canvas": "^0.2.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

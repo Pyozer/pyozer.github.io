@@ -1,10 +1,11 @@
-export const ProjectsCategory = [
-    { title: "All", category: "" },
-    { title: "Web", category: "web" },
-    { title: "Android", category: "android" },
-    { title: "iOS", category: "ios" },
-    { title: "Logiciel", category: "software" },
-];
+//import firebase from './firebase';
+
+/*export function ProjectsCategory(onData) {
+    var firebaseRef = firebase.database().ref('/projects_category');
+    var firebaseCallbackButtons = firebaseRefButtons.on('value', (snap) => {
+        onData(snap.val());
+    });
+}
 
 export const ProjectsData = [
     {
@@ -62,4 +63,4 @@ export const ProjectsData = [
         link: "https://github.com/pyozer/MyAgenda"
     }
 
-];
+];*/
