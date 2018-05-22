@@ -1,4 +1,4 @@
 build/
 node_modules/
 .idea/
-./src/api/apiKeys.js
+src/api/apiKeys.js
