@@ -38,7 +38,10 @@ class App extends Component {
     return (
       <Router>
           {!this.state.isWebsiteOpen ? (
-            <PageWIP />
+            <Switch>
+              <Route exact path="/" component={PageWIP} />
+              <Route component={PageNotFound} />
+            </Switch>
           ) : (
             <div>
               <Navigation />
