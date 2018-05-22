@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import TextInputOutline from '../components/ui/TextInputOutline';
 import firebase from '../api/firebase';
+import ButtonSubmit from '../components/ui/ButtonSubmit';
 
 class PageWIP extends Component {
 
@@ -63,9 +64,9 @@ class PageWIP extends Component {
                                 onChange={this.handleChange}
                                 required />
 
-                            <button type="submit" className="btn btn-outline-primary btn-rounded w-100 w-sm-auto transition-3d-hover btn-lg px-5 py-2 font-weight-bold">
+                            <ButtonSubmit>
                                 Send <FontAwesomeIcon icon={["fab", "telegram-plane"]} className="ml-2"/>
-                            </button>
+                            </ButtonSubmit>
                         </form>
                         {this.state.isMessage && this.state.isMessage !== "" && 
                             <div className={"mt-4 alert alert-" + (this.state.isMessage.isSuccess ? "success" : "danger")} role="alert">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import TextAreaOutline from './ui/TextAreaOutline';
 import TextInputOutline from './ui/TextInputOutline';
+import ButtonSubmit from './ui/ButtonSubmit';
 
 class FormContact extends Component {
     render() {
@@ -20,9 +21,9 @@ class FormContact extends Component {
                 <div class="row mb-4">
                     <TextAreaOutline className="col-12" type="text" id="inputMessage" placeholder="Write your message..." label="Message" required />
                 </div>
-                <button type="submit" class="btn btn-outline-primary btn-rounded w-100 w-sm-auto transition-3d-hover btn-lg px-5 py-3 font-weight-bold">
+                <ButtonSubmit className="py-3">
                     Send message <FontAwesomeIcon icon={["fab", "telegram-plane"]} className="ml-2"/>
-                </button>
+                </ButtonSubmit>
             </form>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import firebase from '../api/firebase';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 import ContainerTitle from '../components/ui/ContainerTitle';
 import Gallery from '../components/images/Gallery';
@@ -12,8 +13,8 @@ import { withTitle } from '../Context';
 class Projects extends Component {
 
     state = {
-        projects: [],
-        categories: []
+        projects: null,
+        categories: null
     };
 
     componentDidMount() {
@@ -40,8 +41,14 @@ class Projects extends Component {
                 <Route exact path="/projects" render={ () =>
                     <div>
                         <ContainerTitle title="Projects">
-                            <Gallery elems={this.state.projects} buttons={this.state.categories} baseUrl="/projects/" colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" />
-                        </ContainerTitle>
+                            {this.state.projects || this.state.categories ? (
+                                <Gallery elems={this.state.projects} buttons={this.state.categories} baseUrl="/projects/" colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" />
+                            ) : (
+                                <div className="my-5 text-center">
+                                    <FontAwesomeIcon icon={["fas", "spinner"]} size="2x" spin className="text-dark" />
+                                </div>
+                            )}
+                            </ContainerTitle>
                         <ContainerTitle title="Activity">
                             <GitHubContribution username="Pyozer" theme="standard"/>
                         </ContainerTitle>

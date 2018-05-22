@@ -1,17 +1,21 @@
 import React from 'react';
 import ContainerTitle from '../components/ui/ContainerTitle';
 import { withTitle } from '../Context';
+import Badge from '../components/ui/Badge';
 
 const About = () => (
     <ContainerTitle title="About me">
-        <p className="text-justify">
-            Illud tamen clausos vehementer angebat quod captis navigiis, quae frumenta vehebant per flumen, Isauri quidem alimentorum copiis adfluebant, ipsi vero solitarum rerum cibos iam consumendo inediae propinquantis aerumnas exitialis horrebant.
-            <br />
-            <br />
-            Rogatus ad ultimum admissusque in consistorium ambage nulla praegressa inconsiderate et leviter proficiscere inquit ut praeceptum est, Caesar sciens quod si cessaveris, et tuas et palatii tui auferri iubebo prope diem annonas. hocque solo contumaciter dicto subiratus abscessit nec in conspectum eius postea venit saepius arcessitus.
-            <br />
-            <br />
-            Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imbecillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio vicissimque redderet, an esset hoc quidem proprium amicitiae, sed antiquior et pulchrior et magis a natura ipsa profecta alia causa. 
+        <p className="lead text-justify">
+            Je m'appelle <Badge>Jean-Charles Moussé</Badge>, j'ai <Badge>20 ans</Badge>, et je suis un grand passionné (un peu trop) d'informatique et plus particulièrement du <Badge>developpement</Badge>.
+            J'ai suivi une formation de <Badge>DUT Informatique</Badge> à l'IUT de Laval (53), cela m'a permis directement après le BAC de pouvoir exercer et en <Badge>apprendre</Badge> d'avantages sur la programmation.
+            Car bien avant le DUT, j'apprenais en <Badge>autodidacte</Badge> le développement, que ce soit des <Badge>sites internet</Badge> ou encore des applications <Badge>Android</Badge>.
+        </p>
+        <p className="lead text-justify">
+            Je poursuis mes études avec une formation de <Badge>Concepteur Développeur</Badge> spécialité Mobile à Efreitech, une école situé à Villejuif (94), en <Badge>alternance</Badge> sur 2 ans.
+            Cette formation m'attire particulièrement car elle offre une formation en alternance et propose des cours très centrés sur le développement <Badge>mobile</Badge> et <Badge>web</Badge>.
+        </p>
+        <p className="lead text-justify">
+            J'adore apprendre de nouvelles <Badge>technologies</Badge>, afin de rester en <Badge>veille permanente</Badge>, ce qui est très important dans le monde de l'informatique, car tout <Badge>évolue</Badge> très rapidement !
         </p>
     </ContainerTitle>
 );

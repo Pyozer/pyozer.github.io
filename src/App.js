@@ -16,7 +16,7 @@ class App extends Component {
 
   state = {
     isLoading: true,
-    isWebsiteOpen: false
+    isWebsiteOpen: true
   }
 
   componentDidMount() {
