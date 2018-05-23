@@ -11,6 +11,7 @@ import PageNotFound from './pages/PageNotFound';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import PageWIP from './pages/PageWIP';
+import Skills from './pages/Skills';
 
 class App extends Component {
 
@@ -22,12 +23,8 @@ class App extends Component {
   componentDidMount() {
     this.firebaseRefOpen= firebase.database().ref('/website_open');
     this.firebaseCallbackOpen = this.firebaseRefOpen.on('value', (snap) => {
-        this.setState({ isWebsiteOpen: snap.val() });
+        this.setState({ isWebsiteOpen: snap.val(), isLoading: false });
     });
-
-    setTimeout(() => {
-      this.setState({ isLoading: false })
-    }, 1000)
   }
 
   componentWillUnmount() {
@@ -37,26 +34,27 @@ class App extends Component {
   render() {
     return (
       <Router>
-          {!this.state.isWebsiteOpen ? (
-            <Switch>
-              <Route exact path="/" component={PageWIP} />
-              <Route component={PageNotFound} />
-            </Switch>
+          { this.state.isLoading ? (
+            <Loader />
           ) : (
-            <div>
-              <Navigation />
-              { this.state.isLoading ? (
-                <Loader />
-              ) : (
+            !this.state.isWebsiteOpen ? (
+              <Switch>
+                <Route exact path="/" component={PageWIP} />
+                <Route component={PageNotFound} />
+              </Switch>
+            ) : (
+              <div>
+                <Navigation />
                 <Switch>
                   <Route exact path="/" component={HomePage} />
                   <Route path="/about" component={About} />
+                  <Route path="/skills" component={Skills} />
                   <Route path="/projects" component={Projects} />
                   <Route path="/contact" component={Contact} />
                   <Route component={PageNotFound} />
                 </Switch>
-              )}
-            </div>
+              </div>
+            )
           )}
         </Router>
     );

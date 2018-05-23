@@ -17,7 +17,7 @@ class Projects extends Component {
         categories: null
     };
 
-    componentDidMount() {
+    componentWillMount() {
         this.firebaseRefButtons = firebase.database().ref('/projects_category');
         this.firebaseCallbackButtons = this.firebaseRefButtons.on('value', (snap) => {
             this.setState({ categories: snap.val() });
