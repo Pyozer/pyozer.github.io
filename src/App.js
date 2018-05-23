@@ -16,11 +16,11 @@ import Skills from './pages/Skills';
 class App extends Component {
 
   state = {
-    isLoading: true,
+    isLoading: false/*true*/,
     isWebsiteOpen: true
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     this.firebaseRefOpen= firebase.database().ref('/website_open');
     this.firebaseCallbackOpen = this.firebaseRefOpen.on('value', (snap) => {
         this.setState({ isWebsiteOpen: snap.val(), isLoading: false });
@@ -29,7 +29,7 @@ class App extends Component {
 
   componentWillUnmount() {
     this.firebaseRefOpen.off('value', this.firebaseCallbackOpen);
-  }
+  }*/
 
   render() {
     return (
