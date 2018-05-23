@@ -19,7 +19,7 @@ class ImageWithLoader extends Component {
     render() {
         let imgClass = this.props.className + (!this.state.imageLoaded ? " invisible" : "");
         return (
-            <div className={"position-relative" + (!this.state.imageLoaded ? " bg-light" : "")} style={{minHeight: 85}}>
+            <div className={"position-relative d-flex align-items-end justify-content-center" + (!this.state.imageLoaded ? " bg-light" : "")} style={{minHeight: 85}}>
                 <img
                     {...this.props}
                     className={imgClass}

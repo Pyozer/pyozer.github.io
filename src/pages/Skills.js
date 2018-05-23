@@ -40,7 +40,7 @@ class Skills extends Component {
 
 const SkillCategory = ({title, data}) => (
     <div>
-        <h3 className="my-5 text-capitalize">{title}</h3>
+        <h3 className="mt-5 mb-4 text-capitalize">{title}</h3>
         <div className="row">
             { data.map((item, index) => (
                 <SkillElement key={index} data={item} />
@@ -51,15 +51,15 @@ const SkillCategory = ({title, data}) => (
 
 const SkillElement = ({data}) => (
     <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div className="card border-0 text-center mb-5">
-            <ImageWithLoader src={data.image} className="card-img-top" style={{width: 70}} />
-            <div className="card-body">
+        <div className="card text-center mb-4">
+            <div className="card-body shadow-sm transition-3d-hover">
+                <ImageWithLoader src={data.image} className="card-img-top img-fluid" style={{width: "auto", maxWidth: "60%", maxHeight: 80}} />
                 {data.percent && 
-                    <div className="progress mx-1 mx-sm-2" style={{height: 5}}>
+                    <div className="progress mt-3 mx-1 mx-sm-2" style={{height: 5}}>
                         <div className="progress-bar" role="progressbar" style={{width: data.percent + "%"}} aria-valuenow={data.percent} aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 }
-                <h3 className="card-title mt-3 mb-0">{data.name}</h3>
+                <h4 className="card-title font-weight-bold lead mt-3 mb-0">{data.name}</h4>
             </div>
         </div>
     </div>
