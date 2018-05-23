@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { firebase } from '@firebase/app';
 import ContainerTitle from '../components/ui/ContainerTitle';
 import ImageWithLoader from '../components/ui/ImageWithLoader';
+import { withTitle } from '../Context';
 
 
 class Skills extends Component {
@@ -53,15 +54,17 @@ const SkillElement = ({data}) => (
         <div className="card border-0 text-center mb-5">
             <ImageWithLoader src={data.image} className="card-img-top" style={{width: 70}} />
             <div className="card-body">
-                <h3 className="card-title">{data.name}</h3>
+                <h3 className="card-title mb-0">{data.name}</h3>
             </div>
-            <div className="card-footer bg-light p-0">
-                <div className="progress rounded-0">
-                    <div className="progress-bar" role="progressbar" style={{width: data.percent + "%"}} aria-valuenow={data.percent} aria-valuemin="0" aria-valuemax="100"></div>
+            {data.percent && 
+                <div className="card-footer bg-light p-0">
+                    <div className="progress rounded-0" style={{height: 5}}>
+                        <div className="progress-bar" role="progressbar" style={{width: data.percent + "%"}} aria-valuenow={data.percent} aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 )
 
-export default Skills;
+export default withTitle(Skills, "Skills");
