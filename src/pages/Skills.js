@@ -54,15 +54,13 @@ const SkillElement = ({data}) => (
         <div className="card border-0 text-center mb-5">
             <ImageWithLoader src={data.image} className="card-img-top" style={{width: 70}} />
             <div className="card-body">
-                <h3 className="card-title mb-0">{data.name}</h3>
-            </div>
-            {data.percent && 
-                <div className="card-footer bg-light p-0">
-                    <div className="progress rounded-0" style={{height: 5}}>
+                {data.percent && 
+                    <div className="progress mx-1 mx-sm-2" style={{height: 5}}>
                         <div className="progress-bar" role="progressbar" style={{width: data.percent + "%"}} aria-valuenow={data.percent} aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                </div>
-            }
+                }
+                <h3 className="card-title mt-3 mb-0">{data.name}</h3>
+            </div>
         </div>
     </div>
 )
