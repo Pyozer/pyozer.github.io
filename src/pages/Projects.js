@@ -19,13 +19,21 @@ class Projects extends Component {
 
     componentWillMount() {
         this.firebaseRefButtons = firebase.database().ref('/projects_category');
-        this.firebaseCallbackButtons = this.firebaseRefButtons.on('value', (snap) => {
-            this.setState({ categories: snap.val() });
+        this.firebaseCallbackButtons = this.firebaseRefButtons.orderByChild("order").on('value', (snap) => {
+            let data = [];
+            snap.forEach((childSnap) => {
+                data.push(childSnap.val())
+            })
+            this.setState({ categories: data });
         });
 
         this.firebaseRefProjects = firebase.database().ref('/projects');
-        this.firebaseCallbackProjects = this.firebaseRefProjects.on('value', (snap) => {
-            this.setState({ projects: snap.val() });
+        this.firebaseCallbackProjects = firebase.database().ref('/projects').orderByChild("order").on('value', (snap) => {
+            let data = [];
+            snap.forEach((childSnap) => {
+                data.push(childSnap.val())
+            })
+            this.setState({ projects: data });
         });
     }
       

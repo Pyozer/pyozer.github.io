@@ -7,12 +7,16 @@ import { withTitle } from '../Context';
 
 class Skills extends Component {
 
-    state = { skills: {} }
+    state = { skills: [] }
 
     componentWillMount() {
         this.firebaseRefSkills = firebase.database().ref('/skills');
-        this.firebaseCallbackSkills  = this.firebaseRefSkills.on('value', (snap) => {
-            this.setState({ skills: snap.val() });
+        this.firebaseCallbackSkills  = this.firebaseRefSkills.orderByChild('order').on('value', (snap) => {
+            let data = [];
+            snap.forEach((childSnap) => {
+                data.push(childSnap.val())
+            })
+            this.setState({ skills: data });
         });
     }
 
@@ -20,34 +24,30 @@ class Skills extends Component {
         this.firebaseRefSkills.off('value', this.firebaseCallbackSkills);
     }*/
 
-    _renderSkills = (data) => {
-        let skillsCategories = []
-    
-        for(let key in data)
-            skillsCategories.push(<SkillCategory key={key} title={key} data={data[key]} />)
-        
-        return skillsCategories
-    }
-
     render() {
         return (
             <ContainerTitle title="Skills">
-                {this._renderSkills(this.state.skills) }
+                { this.state.skills.map((item, index) => (
+                    <SkillCategory key={index} title={item.title} data={item.items} />
+                )) }
             </ContainerTitle>
         );
     }
 }
 
-const SkillCategory = ({title, data}) => (
-    <div>
-        <h3 className="mt-5 mb-4 text-capitalize">{title}</h3>
-        <div className="row">
-            { data.map((item, index) => (
-                <SkillElement key={index} data={item} />
-            ))}
+const SkillCategory = ({title, data}) => {
+    data.sort((a, b) => (a.order - b.order));
+    return (
+        <div>
+            <h3 className="mt-5 mb-4 text-capitalize">{title}</h3>
+            <div className="row">
+                { data.map((item, index) => (
+                    <SkillElement key={index} data={item} />
+                ))}
+            </div>
         </div>
-    </div>
-);
+    )
+};
 
 const SkillElement = ({data}) => (
     <div className="col-12 col-sm-6 col-md-4 col-lg-3">

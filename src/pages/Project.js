@@ -4,7 +4,6 @@ import { Redirect, withRouter } from 'react-router-dom';
 import ContainerTitle from '../components/ui/ContainerTitle';
 import Gallery from '../components/images/Gallery';
 
-import { ProjectsData } from '../api/ProjectsData';
 import firebase from '../api/firebase';
 
 class Project extends React.Component {
