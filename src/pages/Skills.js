@@ -16,9 +16,9 @@ class Skills extends Component {
         });
     }
 
-    componentWillUnMount() {
+    /*componentWillUnMount() {
         this.firebaseRefSkills.off('value', this.firebaseCallbackSkills);
-    }
+    }*/
 
     _renderSkills = (data) => {
         let skillsCategories = []

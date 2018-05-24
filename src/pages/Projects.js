@@ -29,10 +29,10 @@ class Projects extends Component {
         });
     }
       
-    componentWillUnmount() {
+    /*componentWillUnmount() {
         this.firebaseRefButtons.off('value', this.firebaseCallbackButtons);
         this.firebaseRefProjects.off('value', this.firebaseCallbackProjects);
-    }
+    }*/
 
     render() {
         return (

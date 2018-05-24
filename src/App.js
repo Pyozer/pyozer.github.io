@@ -5,13 +5,8 @@ import firebase from './api/firebase';
 import Loader from './components/loader/Loader';
 import Navigation from './components/navigation/Navigation';
 
-import HomePage from './pages/HomePage';
-import About from './pages/About';
-import PageNotFound from './pages/PageNotFound';
-import Contact from './pages/Contact';
-import Projects from './pages/Projects';
-import PageWIP from './pages/PageWIP';
-import Skills from './pages/Skills';
+import { About, HomePage, Skills, Projects, Contact, PageNotFound, PageWIP } from './pages';
+
 
 class App extends Component {
 
