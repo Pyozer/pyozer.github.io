@@ -18,6 +18,7 @@ const TextInputOutline = (props) => (
                 placeholder={props.placeholder}
                 value={props.value}
                 onChange={props.onChange}
+                name={props.name || props.id}
                 required={props.required ? "true" : "false"}
             ></textarea>
         ) : (
@@ -28,6 +29,7 @@ const TextInputOutline = (props) => (
                 placeholder={props.placeholder}
                 value={props.value}
                 onChange={props.onChange}
+                name={props.name || props.id}
                 required={props.required ? "true" : "false"}
             />
         )}
