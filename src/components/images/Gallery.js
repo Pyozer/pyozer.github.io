@@ -37,9 +37,7 @@ class Gallery extends Component {
                     <div className="row">
                         {this.props.elems.map((item, index) => {
                             if(cat === "" || cat === item.category)
-                                return (
-                                    <GalleryItem data={item} baseUrl={this.props.baseUrl} className={this.props.colItemClass} key={index} />
-                                )
+                                return <GalleryItem data={item} baseUrl={this.props.baseUrl} className={this.props.colItemClass} key={index} />
                             return null;
                         })}
                     </div>
