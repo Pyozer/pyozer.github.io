@@ -37,7 +37,7 @@ class FormContact extends Component {
                 <ButtonSubmit className="py-3">
                     Send message <FontAwesomeIcon icon={["fab", "telegram-plane"]} className="ml-2"/>
                 </ButtonSubmit>
-                <input type="hidden" name="_next" value="https://pyozer.github.io:3000/contact?email=sended" />
+                <input type="hidden" name="_next" value="https://pyozer.github.io/contact?email=sended" />
             </form>
         );
     }
