@@ -21,17 +21,17 @@ class FormContact extends Component {
                         </button>
                     </div>
                 }
-                <div class="row mb-4">
+                <div className="row mb-4">
                     <TextInputOutline className="col-md-6 mb-4 mb-md-0" type="text" name="firstname" id="inputFirstname" placeholder="Enter your first name" label="Your First Name" required />
                     <TextInputOutline className="col-md-6 mt-3 mt-md-0" type="text" name="lastname" id="inputLastname" placeholder="Enter your last name" label="Your Last Name" required />
                 </div>
-                <div class="row mb-4">
+                <div className="row mb-4">
                     <TextInputOutline className="col-12" type="text" name="email" id="inputEmail" placeholder="Enter your email" label="Your Email" required />
                 </div>
-                <div class="row mb-4">
+                <div className="row mb-4">
                     <TextInputOutline className="col-12" type="text" name="_subject" id="inputSubject" placeholder="What's the subject ?" label="Subject" required />
                 </div>
-                <div class="row mb-4">
+                <div className="row mb-4">
                     <TextAreaOutline className="col-12" type="text" name="message" id="inputMessage" placeholder="Write your message..." label="Message" required />
                 </div>
                 <ButtonSubmit className="py-3">
