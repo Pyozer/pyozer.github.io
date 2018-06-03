@@ -50,9 +50,12 @@ class Gallery extends Component {
 const GalleryItem = (props) => {
     const data = props.data
 
-    const imgItem = () => (
-        <ImageWithLoader src={data.mainImage || data.images[0] || data} className="rounded w-100 transition-3d-hover" alt={data.title || data.id || "Image"} />
-    )
+    const imgItem = () => {
+        let imgSrc = (data.mainImage) ? data.mainImage : (data.images) ? data.images[0] : data;
+        return (
+            <ImageWithLoader src={imgSrc} className="rounded w-100 transition-3d-hover" alt={data.title || data.id || "Image"} />
+        )
+    }
 
     return (
         <div className={props.className + " py-2"}>
