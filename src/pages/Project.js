@@ -32,8 +32,14 @@ class Project extends React.Component {
     render() {
         const project = this.state.project;
 
+        console.log(project);
+
         if(!project)
             return <Redirect to="/projects" />
+
+        let images = []
+        if(project.images)
+            project.images.forEach(img => images.push({ src: img }));
 
         return (
             <ContainerTitle title={project.title} subtitle={project.category}>
@@ -45,7 +51,7 @@ class Project extends React.Component {
                 </a>
                 
                 <div className="row">
-                    <Gallery elems={project.images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3 py-2" />
+                    <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3 py-2" />
                 </div>
             </ContainerTitle>
         )

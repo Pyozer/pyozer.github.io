@@ -3,43 +3,15 @@ import Link from 'react-router-dom/Link';
 import ImageWithLoader from '../ui/ImageWithLoader';
 
 class Gallery extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { cat: "" };
-    }
-
-    setCat(newCategory) {
-        this.setState({ cat: newCategory })
-    }
 
     render() {
-        let baseClass = "btn transition-3d-hover m-2 px-4";
-        let classBtn = baseClass + " btn-outline-secondary";
-        let activeBtn = baseClass + " btn-primary";
-
-        let cat = this.state.cat;
-
         return (
             <div>
-                {this.props.buttons && 
-                    <div className="d-flex flex-column flex-md-row justify-content-center mx-auto py-3">
-                        {this.props.buttons.map((item, index) => {
-                            return (
-                                <button key={index} onClick={(e) => this.setCat(item.category)} className={(cat === item.category ? activeBtn : classBtn)}>
-                                    {item.title}
-                                </button>
-                            )
-                        })}
-                    </div>
-                }
-                {this.props.elems && 
+                {this.props.data && 
                     <div className="row">
-                        {this.props.elems.map((item, index) => {
-                            if(cat === "" || cat === item.category)
-                                return <GalleryItem data={item} baseUrl={this.props.baseUrl} className={this.props.colItemClass} key={index} />
-                            return null;
-                        })}
+                        {this.props.data.map((item, index) => (
+                            <GalleryItem src={item.src} url={item.url} title={item.title} subtitle={item.subtitle} className={this.props.colItemClass} key={index} />
+                        ))}
                     </div>
                 }
             </div>
@@ -47,29 +19,25 @@ class Gallery extends Component {
     }
 }
 
-const GalleryItem = (props) => {
-    const data = props.data
+const GalleryItem = ({src, url, title, subtitle, className}) => {
 
-    const imgItem = () => {
-        let imgSrc = (data.mainImage) ? data.mainImage : (data.images) ? data.images[0] : data;
-        return (
-            <ImageWithLoader src={imgSrc} className="rounded w-100 transition-3d-hover" alt={data.title || data.id || "Image"} />
-        )
-    }
+    const imgItem = () => (
+        <ImageWithLoader src={src} className="rounded w-100 transition-3d-hover" alt={title || "Image"} />
+    )
 
     return (
-        <div className={props.className + " py-2"}>
-            {props.baseUrl && data.id ? (
-                <Link to={props.baseUrl + data.id}>
-                    {imgItem()}
+        <div className={className + " py-2"}>
+            {url ? (
+                <Link to={url}>
+                    { imgItem() }
                 </Link>
-            ) : (
+            ) : ( 
                 imgItem()
             )}
-            {(data.title || data.subtitle) && 
+            {(title || subtitle) && 
                 <div className="py-3">
-                    {data.title && <h4 className="h6 text-dark mb-0">{data.title}</h4> }
-                    {data.subtitle && <p className="small mb-0">{data.subtitle}</p> }
+                    {title && <h4 className="h6 text-dark mb-0">{title}</h4> }
+                    {subtitle && <p className="small mb-0">{subtitle}</p> }
                 </div>
             }
         </div>

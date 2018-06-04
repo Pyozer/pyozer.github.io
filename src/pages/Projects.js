@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import firebase from '../api/firebase';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 import ContainerTitle from '../components/ui/ContainerTitle';
 import Gallery from '../components/images/Gallery';
@@ -13,50 +12,62 @@ import { withTitle } from '../Context';
 class Projects extends Component {
 
     state = {
-        projects: null,
-        categories: null
-    };
+        projects: [],
+        categories: [],
+        category: ""
+    }
 
     componentWillMount() {
         this.firebaseRefButtons = firebase.database().ref('/projects_category');
         this.firebaseCallbackButtons = this.firebaseRefButtons.orderByChild("order").on('value', (snap) => {
             let data = [];
-            snap.forEach((childSnap) => {
-                data.push(childSnap.val())
-            })
+            snap.forEach((childSnap) => { data.push(childSnap.val()) })
             this.setState({ categories: data });
         });
 
         this.firebaseRefProjects = firebase.database().ref('/projects');
         this.firebaseCallbackProjects = firebase.database().ref('/projects').orderByChild("order").on('value', (snap) => {
             let data = [];
-            snap.forEach((childSnap) => {
-                data.push(childSnap.val())
-            })
+            snap.forEach((childSnap) => { data.push(childSnap.val()) })
             this.setState({ projects: data });
         });
     }
-      
-    /*componentWillUnmount() {
-        this.firebaseRefButtons.off('value', this.firebaseCallbackButtons);
-        this.firebaseRefProjects.off('value', this.firebaseCallbackProjects);
-    }*/
+
+    setCat(category) {
+        this.setState({ category: category });
+    }
 
     render() {
+        let images = [];
+        this.state.projects.forEach(elem => {
+            if(this.state.category === "" || elem.category === this.state.category)
+                images.push({
+                    src: elem.mainImage || elem.images[0],
+                    url: "/projects/" + elem.id,
+                    title: elem.title,
+                    subtitle: elem.subtitle
+                })
+        })
+
+        let baseClass = "btn transition-3d-hover m-2 px-4";
+        let classBtn = baseClass + " btn-outline-secondary";
+        let activeBtn = baseClass + " btn-primary";
+
         return (
             <Switch>
                 <Route path="/projects/:projectId" component={Project} />
                 <Route exact path="/projects" render={ () =>
                     <div>
                         <ContainerTitle title="Projects">
-                            {this.state.projects || this.state.categories ? (
-                                <Gallery elems={this.state.projects} buttons={this.state.categories} baseUrl="/projects/" colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" />
-                            ) : (
-                                <div className="my-5 text-center">
-                                    <FontAwesomeIcon icon={["fas", "spinner"]} size="2x" spin className="text-dark" />
-                                </div>
-                            )}
-                            </ContainerTitle>
+                            <div className="d-flex flex-column flex-md-row justify-content-center mx-auto py-3">
+                                {this.state.categories.map((item, index) => (
+                                    <button key={index} onClick={() => this.setCat(item.category)} className={(this.state.category === item.category ? activeBtn : classBtn)}>
+                                        {item.title}
+                                    </button>
+                                ))}
+                            </div>
+                            <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" />
+                        </ContainerTitle>
                         <ContainerTitle title="Activity">
                             <GitHubContribution username="Pyozer" theme="standard"/>
                         </ContainerTitle>
