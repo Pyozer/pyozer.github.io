@@ -39,6 +39,9 @@ class App extends Component {
               </Switch>
             ) : (
               <div>
+                <div className="alert alert-warning text-center mb-0" role="alert">
+                  Website not completely finished
+                </div>
                 <Navigation />
                 <Switch>
                   <Route exact path="/" component={HomePage} />
