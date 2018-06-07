@@ -66,7 +66,7 @@ class Projects extends Component {
                                     </button>
                                 ))}
                             </div>
-                            <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" />
+                            <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" imgClass="" />
                         </ContainerTitle>
                         <ContainerTitle title="Activity">
                             <GitHubContribution username="Pyozer" theme="standard"/>
