@@ -6,6 +6,7 @@ import ContainerTitle from '../components/ui/ContainerTitle';
 import Gallery from '../components/images/Gallery';
 
 import firebase from '../api/firebase';
+import ButtonSubmit from '../components/ui/ButtonSubmit';
 
 class Project extends React.Component {
     
@@ -47,13 +48,15 @@ class Project extends React.Component {
                 <p className="lead mb-4">{project.description}</p>
 
                 { project.link && 
-                    <a href={project.link} target="_blank" className="btn btn-outline-primary btn-rounded btn-lg transition-3d-hover px-5 py-2 font-weight-bold">
-                        Visit website <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
+                    <a href={project.link} target="_blank">
+                        <ButtonSubmit type="button">
+                            Visit website <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
+                        </ButtonSubmit>
                     </a>
                 }
 
-                <div className="row">
-                    <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3 py-2" />
+                <div className="row mt-4">
+                    <Gallery data={images} />
                 </div>
             </ContainerTitle>
         )

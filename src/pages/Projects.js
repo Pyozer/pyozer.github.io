@@ -9,6 +9,8 @@ import GitHubContribution from '../components/images/GitHubContribution';
 import Project from './Project';
 import { withTitle } from '../Context';
 
+import './css/Projects.css';
+
 class Projects extends Component {
 
     state = {
@@ -66,7 +68,7 @@ class Projects extends Component {
                                     </button>
                                 ))}
                             </div>
-                            <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3" imgClass="" />
+                            <Gallery data={images} imgClass="projects-img" />
                         </ContainerTitle>
                         <ContainerTitle title="Activity">
                             <GitHubContribution username="Pyozer" theme="standard"/>
