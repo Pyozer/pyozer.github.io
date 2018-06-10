@@ -46,10 +46,12 @@ class Project extends React.Component {
                 <h3>{project.subtitle}</h3>
                 <p className="lead mb-4">{project.description}</p>
 
-                <a href={project.link} target="_blank" className="btn btn-outline-primary btn-rounded btn-lg transition-3d-hover px-5 py-2 font-weight-bold">
-                    Visit website <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
-                </a>
-                
+                { project.link && 
+                    <a href={project.link} target="_blank" className="btn btn-outline-primary btn-rounded btn-lg transition-3d-hover px-5 py-2 font-weight-bold">
+                        Visit website <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
+                    </a>
+                }
+
                 <div className="row">
                     <Gallery data={images} colItemClass="col-12 col-sm-6 col-md-4 col-lg-3 py-2" />
                 </div>
