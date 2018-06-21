@@ -19,7 +19,7 @@ const About = () => (
             J'adore apprendre de nouvelles <Badge>technologies</Badge>, afin de rester en <Badge>veille permanente</Badge>, ce qui est très important dans le monde de l'informatique, car tout <Badge>évolue</Badge> très rapidement !
         </p>
 
-        <ButtonSubmit isLink="true" href="/images/CV Jean-Charles Moussé.pdf" target="_blank">
+        <ButtonSubmit isLink="true" href="/images/CV%20Jean-Charles%20Mouss%C3%A9.pdf" target="_blank">
             Voir mon CV
         </ButtonSubmit>
     </ContainerTitle>
