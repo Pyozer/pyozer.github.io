@@ -7,7 +7,7 @@ class Contact extends Component {
     render() {
         return (
             <ContainerTitle title="Contact me">
-                <FormContact className="mt-5"/>
+                <FormContact className="my-5"/>
             </ContainerTitle>
         );
     }
