@@ -2,6 +2,7 @@ import React from 'react';
 import ContainerTitle from '../components/ui/ContainerTitle';
 import { withTitle } from '../Context';
 import Badge from '../components/ui/Badge';
+import ButtonSubmit from '../components/ui/ButtonSubmit';
 
 const About = () => (
     <ContainerTitle title="About me">
@@ -17,6 +18,10 @@ const About = () => (
         <p className="lead text-justify">
             J'adore apprendre de nouvelles <Badge>technologies</Badge>, afin de rester en <Badge>veille permanente</Badge>, ce qui est très important dans le monde de l'informatique, car tout <Badge>évolue</Badge> très rapidement !
         </p>
+
+        <ButtonSubmit isLink="true" href="/images/CV Jean-Charles Moussé.pdf" target="_blank">
+            Voir mon CV
+        </ButtonSubmit>
     </ContainerTitle>
 );
 

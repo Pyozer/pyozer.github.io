@@ -43,7 +43,7 @@ class HomePage extends Component {
                         <a href="https://twitter.com/jc_mousse/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" className="text-dark twitter" />
                         </a>
-                        <a href="https://fr.linkedin.com/in/jean-charles-mouss%C3%A9" target="_blank" rel="noopener noreferrer">
+                        <a href="https://fr.linkedin.com/in/jean-charles-moussé" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" className="text-dark linkedin" />
                         </a>
                         <a href="https://www.facebook.com/jeancharles.mousse" target="_blank" rel="noopener noreferrer">
