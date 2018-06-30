@@ -23,11 +23,21 @@ class Project extends React.Component {
     componentWillMount() {
         this.firebaseRefProjects = firebase.database().ref('/projects/');
         this.firebaseCallbackProjects = this.firebaseRefProjects.orderByChild("id").equalTo(this.projectId).on('value', (snap) => {
-            if(snap.val())
-                snap.forEach((childSnap) => this.setState({ project: childSnap.val() }) );
+            if (snap.val())
+                snap.forEach((childSnap) => this.setState({
+                    project: childSnap.val()
+                }));
             else
                 this.setState({ project: null });
         });
+    }
+
+    createDescription = (description) => {
+        let descRender = []
+
+        description.forEach(elem => descRender.push(<p className="text-justify">{elem}</p>))
+
+        return descRender
     }
  
     render() {
@@ -45,7 +55,9 @@ class Project extends React.Component {
         return (
             <ContainerTitle title={project.title} subtitle={project.category}>
                 <h3>{project.subtitle}</h3>
-                <p className="lead mb-4">{project.description}</p>
+                <p className="lead mb-4">
+                    { project.description && this.createDescription(project.description)}
+                </p>
 
                 { project.link && 
                     <a href={project.link} target="_blank">

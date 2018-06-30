@@ -3,6 +3,7 @@ import ContainerTitle from '../components/ui/ContainerTitle';
 import { withTitle } from '../Context';
 import Badge from '../components/ui/Badge';
 import ButtonSubmit from '../components/ui/ButtonSubmit';
+import pdf from '../assets/CV_Jean-Charles_Moussé.pdf';
 
 const About = () => (
     <ContainerTitle title="About me">
@@ -19,7 +20,7 @@ const About = () => (
             J'adore apprendre de nouvelles <Badge>technologies</Badge>, afin de rester en <Badge>veille permanente</Badge>, ce qui est très important dans le monde de l'informatique, car tout <Badge>évolue</Badge> très rapidement !
         </p>
 
-        <ButtonSubmit isLink="true" href="https://drive.google.com/open?id=1fUYyIKvr7CNxj3l6H1YE_MGGyF-KAA77" target="_blank" className="mt-4">
+        <ButtonSubmit islink="true" href={pdf} target="_blank" className="mt-4">
             Mon CV
         </ButtonSubmit>
     </ContainerTitle>

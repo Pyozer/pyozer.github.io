@@ -22,21 +22,21 @@ class HomePage extends Component {
     render() {
         return (
             <CenterElement className="mt-3 mt-md-5 p-5">
-                <div class="text-center">
+                <div className="text-center">
                     <ImageProfil className="rounded-circle shadow" width="160" />
                     
-                    <h1 class="display-4 mt-4">
+                    <h1 className="display-4 mt-4">
                         Hi, I'm
                         <br />
-                        <Typist startDelay="1000" onTypingDone={this.onHeaderTyped} cursor={{element: "|||||"}} className="text-primary">
+                        <Typist startDelay={1000} onTypingDone={this.onHeaderTyped} cursor={{element: "|||||"}} className="text-primary">
                             <strong className="font-weight-bold">Jean-Charles Moussé</strong>
                         </Typist>
                     </h1>
-                    <p class="lead mt-4">
+                    <p className="lead mt-4">
                         I have a large interest in programming and I love to apply my skills to my personal projects.     
                     </p>
 
-                    <div class="mt-5 d-flex justify-content-between social_link">
+                    <div className="mt-5 d-flex justify-content-between social_link">
                         <a href="https://github.com/Pyozer/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={["fab", "github"]} size="3x" className="text-dark github" />
                         </a>
@@ -52,11 +52,11 @@ class HomePage extends Component {
                         <a href="https://www.instagram.com/j_mousse/" target="_blank" rel="noopener noreferrer">
                             <svg width="0" height="0">
                                 <radialGradient id="rg" r="150%" cx="30%" cy="107%">
-                                    <stop stop-color="#fdf497" offset="0" />
-                                    <stop stop-color="#fdf497" offset="0.05" />
-                                    <stop stop-color="#fd5949" offset="0.45" />
-                                    <stop stop-color="#d6249f" offset="0.6" />
-                                    <stop stop-color="#285AEB" offset="0.9" />
+                                    <stop stopColor="#fdf497" offset="0" />
+                                    <stop stopColor="#fdf497" offset="0.05" />
+                                    <stop stopColor="#fd5949" offset="0.45" />
+                                    <stop stopColor="#d6249f" offset="0.6" />
+                                    <stop stopColor="#285AEB" offset="0.9" />
                                 </radialGradient>
                             </svg>
                             <FontAwesomeIcon icon={["fab", "instagram"]} size="3x" className="text-dark instagram" />
