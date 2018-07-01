@@ -43,8 +43,6 @@ class Project extends React.Component {
     render() {
         const project = this.state.project;
 
-        console.log(project);
-
         if(!project)
             return <Redirect to="/projects" />
 
@@ -55,7 +53,7 @@ class Project extends React.Component {
         return (
             <ContainerTitle title={project.title} subtitle={project.category}>
                 <h3>{project.subtitle}</h3>
-                <p className="lead mb-4">
+                <p className="lead mt-3 mb-4">
                     { project.description && this.createDescription(project.description)}
                 </p>
 

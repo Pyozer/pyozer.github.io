@@ -2,3 +2,4 @@ build/
 node_modules/
 .idea/
 src/api/apiKeys.js
+**.png~
