@@ -35,7 +35,7 @@ class Project extends React.Component {
     createDescription = (description) => {
         let descRender = []
 
-        description.forEach(elem => descRender.push(<p className="text-justify">{elem}</p>))
+        description.forEach((elem, index) => descRender.push(<p className="text-justify" key={index}>{elem}</p>))
 
         return descRender
     }
@@ -53,9 +53,9 @@ class Project extends React.Component {
         return (
             <ContainerTitle title={project.title} subtitle={project.category}>
                 <h3>{project.subtitle}</h3>
-                <p className="lead mt-3 mb-4">
+                <div className="lead mt-3 mb-4">
                     { project.description && this.createDescription(project.description)}
-                </p>
+                </div>
 
                 { project.link && 
                     <a href={project.link} target="_blank">

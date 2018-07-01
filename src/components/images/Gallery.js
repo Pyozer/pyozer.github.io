@@ -5,9 +5,9 @@ import ImageWithLoader from '../ui/ImageWithLoader';
 const Gallery = (props) => (
     <div>
         {props.data && 
-            <div className="row">
+            <div className="d-flex flex-wrap justify-content-around">
                 {props.data.map((item, index) => (
-                    <GalleryItem src={item.src} url={item.url} title={item.title} subtitle={item.subtitle} className={props.colItemClass} imgClass={props.imgClass} key={index} />
+                    <GalleryItem src={item.src} url={item.url} title={item.title} subtitle={item.subtitle} className={props.colItemClass || ""} imgClass={props.imgClass || ""} key={index} />
                 ))}
             </div>
         }
@@ -17,11 +17,11 @@ const Gallery = (props) => (
 const GalleryItem = ({src, url, title, subtitle, className, imgClass}) => {
 
     const imgItem = () => (
-        <ImageWithLoader src={src} className={"img-fluid rounded " + imgClass} alt={title || "Image"} />
+        <ImageWithLoader src={src} className={"img-fluid rounded " + imgClass} alt={title || "Image"} style={{maxHeight: 400}} />
     )
 
     return (
-        <div className={"col-12 col-sm-6 col-md-4 col-lg-3 my-2 " + className}>
+        <div className={"my-2 " + className}>
             <div className="transition-3d-hover p-3 rounded">
                 {url ? (
                     <Link to={url}>
