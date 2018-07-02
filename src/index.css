@@ -14,6 +14,20 @@ body {
 a {
   outline: 0;
 }
+.a-unstyled {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.a-unstyled:link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.a-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 /** EFFECTS **/
 .text-shadow-effect {

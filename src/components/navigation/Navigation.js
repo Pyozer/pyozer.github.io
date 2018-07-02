@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './css/Navigation.css';
 
-const ListNavItem = [
+const listNavItem = [
     { title: "HOME", to: "/" },
     { title: "ABOUT", to: "/about" },
     { title: "SKILLS", to: "/skills" },
@@ -32,13 +32,11 @@ class Navigation extends Component {
                     </button>
                     <div className={"collapse navbar-collapse" + (this.state.isMobileNavOpen ? " show" : "")} id="navbarNav">
                         <ul className="navbar-nav mx-auto">
-                            {
-                                ListNavItem.map((item, i) =>
-                                    <li className="nav-item" key={i}> 
-                                        <NavLink activeClassName="active" className="nav-link py-4 px-2 px-md-4 px-lg-5" exact to={item.to}>{item.title}</NavLink>
-                                    </li>
-                                )
-                            }
+                            { listNavItem.map((item, i) =>
+                                <li className="nav-item" key={i}>
+                                    <NavLink activeClassName="active" className="nav-link py-4 px-2 px-md-4 px-lg-5" exact={item.to === '/'} to={item.to}>{item.title}</NavLink>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>

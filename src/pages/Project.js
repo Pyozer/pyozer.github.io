@@ -3,14 +3,14 @@ import { Redirect, withRouter } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 import ContainerTitle from '../components/ui/ContainerTitle';
-import Gallery from '../components/images/Gallery';
+import ButtonSubmit from '../components/ui/ButtonSubmit';
+import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 import firebase from '../api/firebase';
-import ButtonSubmit from '../components/ui/ButtonSubmit';
 
 class Project extends React.Component {
     
-    projectId = "unknown";
+    projectId = "-1";
     state = {
         project: {}
     }
@@ -24,9 +24,7 @@ class Project extends React.Component {
         this.firebaseRefProjects = firebase.database().ref('/projects/');
         this.firebaseCallbackProjects = this.firebaseRefProjects.orderByChild("id").equalTo(this.projectId).on('value', (snap) => {
             if (snap.val())
-                snap.forEach((childSnap) => this.setState({
-                    project: childSnap.val()
-                }));
+                snap.forEach((childSnap) => this.setState({ project: childSnap.val() }));
             else
                 this.setState({ project: null });
         });
@@ -34,7 +32,6 @@ class Project extends React.Component {
 
     createDescription = (description) => {
         let descRender = []
-
         description.forEach((elem, index) => descRender.push(<p className="text-justify" key={index}>{elem}</p>))
 
         return descRender
@@ -60,13 +57,17 @@ class Project extends React.Component {
                 { project.link && 
                     <a href={project.link} target="_blank">
                         <ButtonSubmit type="button">
-                            Visit website <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
+                            More info <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
                         </ButtonSubmit>
                     </a>
                 }
 
                 <div className="row mt-4">
-                    <Gallery data={images} />
+                    <div className="d-flex flex-wrap justify-content-center">
+                        { images.map((item, index) => (
+                            <ImageWithLoader src={item.src} className="img-fluid transition-3d-hover m-3" alt={item.title} style={{maxHeight: 470}} key={index} />
+                        )) }
+                    </div>
                 </div>
             </ContainerTitle>
         )

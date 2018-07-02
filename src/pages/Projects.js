@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import firebase from '../api/firebase';
 
 import ContainerTitle from '../components/ui/ContainerTitle';
-import Gallery from '../components/images/Gallery';
 import GitHubContribution from '../components/images/GitHubContribution';
+import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 import Project from './Project';
 import { withTitle } from '../Context';
@@ -68,7 +68,22 @@ class Projects extends Component {
                                     </button>
                                 ))}
                             </div>
-                            <Gallery data={images} imgClass="projects-img" />
+
+                            <div className="row">
+                                { images.map((item, index) => (
+                                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 my-2" key={index}>
+                                        <Link to={item.url} className="a-unstyled">
+                                            <div className="transition-3d-hover p-3 rounded">
+                                                <ImageWithLoader src={item.src} className="img-fluid projects-img rounded" alt={item.title} style={{maxHeight: 400}} />
+                                                <div className="text-center pt-3">
+                                                    <h4 className="h6 text-dark mb-0">{item.title}</h4>
+                                                    <p className="small mb-0">{item.subtitle}</p>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                )) }
+                            </div>
                         </ContainerTitle>
                         <ContainerTitle title="Activity">
                             <GitHubContribution username="Pyozer" theme="standard"/>
