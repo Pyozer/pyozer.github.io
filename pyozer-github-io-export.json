@@ -1,0 +1,283 @@
+{
+  "projects" : [ {
+    "category" : "android",
+    "description" : [ "MyAgenda est utilisé plusieurs fois par jours, par environ 60 personnes (étudiants en informatique et de d'autres départements).", "L'application a beaucoup évolué au fur et à mesure du temps, aujourd'hui celle-ci permet donc de voir son emploi du temps, de pouvoir mettre une note (un mémo) sur un cours, ajouter des événements personnalisés (ex: rendez-vous avec un professeur), trouver une salle libre entre deux horaires, et ce dans n'importe batiment du campus.", "De plus une personnalisation de l'application est proposé, thème clair ou foncé, et un choix de couleurs pour la barre de navigation. Au total c'est 48 thèmes possibles.", "A ce jour, j'ai ajouté un système de connexion (à faire une seul fois), pour pouvoir se connecter via son identifiant et mot de passe de l'Université du Maine pour sécuriser l'accès aux emplois du temps.", "Car pour l'instant l'application n'est pas sur le PlayStore par sécurité d'accès, je compte la partager avec l'Université du Maine pour que l'application soit officiel." ],
+    "id" : "myagenda",
+    "images" : [ "https://pyozer.github.io/images/projects/myagenda/myagenda_home.png", "https://pyozer.github.io/images/projects/myagenda/myagenda_info.png", "https://pyozer.github.io/images/projects/myagenda/myagenda_addevent.png", "https://pyozer.github.io/images/projects/myagenda/myagenda_findroom.png", "https://pyozer.github.io/images/projects/myagenda/myagenda_about.png", "https://pyozer.github.io/images/projects/myagenda/myagenda_groupsettings.png" ],
+    "link" : "https://github.com/pyozer/MyAgenda",
+    "mainImage" : "https://pyozer.github.io/images/projects/myagenda/myagenda_logo.png",
+    "order" : 1,
+    "subtitle" : "Emploi du temps de l'université du Maine",
+    "title" : "MyAgenda"
+  }, {
+    "category" : "web",
+    "description" : [ "J'ai pu depuis 2013 travailler avec la société Jourmagic pour notamment réaliser leur site internet Jourmagic.fr.", "Ce site est entièrement réalisé en PHP avec une base de données MySQL. Je l'ai devéloppé de A à Z, que ce soit les différentes pages ou même le panel administrateur.", "Je suis toujours en contact avec la société, pour la maintenance mais aussi l'ajout ou modification du site." ],
+    "id" : "jourmagic",
+    "images" : [ "https://pyozer.github.io/images/projects/jourmagic/jourmagic_home.png", "https://pyozer.github.io/images/projects/jourmagic/jourmagic_categories.png", "https://pyozer.github.io/images/projects/jourmagic/jourmagic_structures.png", "https://pyozer.github.io/images/projects/jourmagic/jourmagic_structure.png", "https://pyozer.github.io/images/projects/jourmagic/jourmagic_contact.png" ],
+    "link" : "https://jourmagic.fr",
+    "mainImage" : "https://pyozer.github.io/images/projects/jourmagic/jourmagic_logo.png",
+    "order" : 2,
+    "subtitle" : "Site internet pour Jourmagic",
+    "title" : "Jourmagic.fr"
+  }, {
+    "category" : "web",
+    "description" : [ "J'ai pu depuis 2013 travailler avec la société Jourmagic pour notamment réaliser leur site internet Jourmagic.fr mais Structures-gonflables-44.fr, un site secondaire dédié au département 44", "Ce site est entièrement réalisé en PHP avec une base de données MySQL. Je l'ai devéloppé de A à Z, que ce soit les différentes pages ou même le panel administrateur.", "Je suis toujours en contact avec la société, pour la maintenance mais aussi l'ajout ou modification du site. Mais aussi pour leur site principale Jourmagic.fr." ],
+    "id" : "structures-gonflables-44",
+    "images" : [ "https://pyozer.github.io/images/projects/structures-gonflables-44/structure44_home.jpg", "https://pyozer.github.io/images/projects/structures-gonflables-44/structure44_structures.png", "https://pyozer.github.io/images/projects/structures-gonflables-44/structure44_structure.png", "https://pyozer.github.io/images/projects/structures-gonflables-44/structure44_contact.png" ],
+    "link" : "http://structures-gonflables-44.fr",
+    "mainImage" : "https://pyozer.github.io/images/projects/jourmagic/jourmagic_logo.png",
+    "order" : 3,
+    "subtitle" : "Site internet pour Jourmagic",
+    "title" : "Structures-gonflables-44.fr"
+  }, {
+    "category" : "android",
+    "description" : [ "Ce fut ma toute première application Android que j'ai développé. Lorsque j'utilisais l'assistant vocal nommé S.A.R.A.H, créée par JP Encausse, j'avais envie de pouvoir l'utiliser e déhors de chez moi.", "Il existait déjà une application sur le PlayStore mais celle-ci avait un design totalement dépassé et qui ne pouvait fonctionner avec un des plugins que j'utilisais.", "J'ai donc décidé de créer ma propre application afin de répondre à mes besoin. Je l'ai ensuite partagé à la communauté de S.A.R.A.H, et celle-ci a été reçu et j'ai pu avoir de nombreux retours positifs." ],
+    "id" : "sarah_app",
+    "images" : [ "https://pyozer.github.io/images/projects/sarah/sarah_home.png", "https://pyozer.github.io/images/projects/sarah/sarah_home_speak.png", "https://pyozer.github.io/images/projects/sarah/sarah_actions.png", "https://pyozer.github.io/images/projects/sarah/sarah_actions_delete.png", "https://pyozer.github.io/images/projects/sarah/sarah_speak.png", "https://pyozer.github.io/images/projects/sarah/sarah_settings.png", "https://pyozer.github.io/images/projects/sarah/sarah_settings_others.png", "https://pyozer.github.io/images/projects/sarah/sarah_splashscreen.png" ],
+    "link" : "https://github.com/pyozer/SARAH_Application",
+    "mainImage" : "https://pyozer.github.io/images/projects/sarah/sarah_logo.png",
+    "order" : 4,
+    "subtitle" : "Application pour contrôler S.A.R.A.H",
+    "title" : "S.A.R.A.H Application"
+  }, {
+    "category" : "android",
+    "description" : [ "Discover est une application Android (avec un serveur Node.JS en RestAPI), de type réseau social, basé sur le tourisme. Elle a été développé avec 4 autres personnes lors d'un projet tuteuré.", "Le but de cette application est de permettre aux utilisateurs de découvrir des lieux ou activités, à faire près de notre position ou d'un lieu défini.", "Mais on peut aussi en faire découvrir aux autres en postant simplement une photo, une description et différents tags pour identifier le type de lieu/activité.", "Les utilisateurs peuvent voir autour d'eux, avec ou sans filtres les lieux/activités, ils peuvent les liker et/ou poster un commentaire. De plus une carte avec toutes les publication est présente. Chaque utilisateur à la posibilité de suivre des personnes afin de voir leurs publications dans un fil d'actualité dédié." ],
+    "id" : "discover",
+    "images" : [ "https://pyozer.github.io/images/projects/discover/discover_firsthome.png", "https://pyozer.github.io/images/projects/discover/discover_login.png", "https://pyozer.github.io/images/projects/discover/discover_register.png", "https://pyozer.github.io/images/projects/discover/discover_forgot.png", "https://pyozer.github.io/images/projects/discover/discover_intro.png" ],
+    "mainImage" : "https://pyozer.github.io/images/projects/discover/discover_logo.png",
+    "order" : 5,
+    "subtitle" : "Réseau social orienté tourisme",
+    "title" : "Discover"
+  }, {
+    "category" : "android",
+    "description" : [ "TankYou est un jeu Android, développé dans le cadre d'un projet à l'IUT. Ce jeu utilise notamment le gyroscope pour les déplacements.", "Le but du jeu est d'éviter tous les obstacles qui apparaissent à l'écran et de tirer dessus afin de gagner des points. Si le Tank est touché par 3 obstacles, la partie se termine.", "Un système de score est donc intégré et synchronisé avec Firebase (base de données temps réel). Ainsi une interface avec le score de tous les joueurs est présent et mis à jour en temps réel." ],
+    "id" : "tankyou",
+    "images" : [ "https://pyozer.github.io/images/projects/tankyou/tankyou_game.png", "https://pyozer.github.io/images/projects/tankyou/tankyou_home.png", "https://pyozer.github.io/images/projects/tankyou/tankyou_scores.png", "https://pyozer.github.io/images/projects/tankyou/tankyou_myscores.png", "https://pyozer.github.io/images/projects/tankyou/tankyou_rules.png", "https://pyozer.github.io/images/projects/tankyou/tankyou_gameover.png", "https://pyozer.github.io/images/projects/tankyou/tankyou_about.png" ],
+    "link" : "https://github.com/pyozer/TankYou",
+    "mainImage" : "https://pyozer.github.io/images/projects/tankyou/tankyou_logo.png",
+    "order" : 6,
+    "subtitle" : "Jeu de survie en Tank",
+    "title" : "TankYou"
+  }, {
+    "category" : "android",
+    "description" : [ "CryptoChat est une application Android développé avec un amis. Elle permet de pouvoir converser dans des salons de chat, de manière totalement sécurisé.", "En effet chaque salon possède une clé de cryptage défini par le créateur, mais l'avantage de CryptoChat c'est que cette clé n'est jamais stocké.", "Lors de la création du salon, la clé est demandé mais dans le seul but de pouvoir crypté \"You find the key\" afin que lorsque les autres utilisateurs vont saisir la clé, qu'ils puissent savoir si ils ont la bonne clé ou pas.", "Un utilisateur peut donc écrire dans un salon avec une clé incorrect, mais son message ne sera pas crypté de la même panière que les autres, qui ne pourront donc comprendre son message." ],
+    "id" : "cryptochat",
+    "images" : [ "https://pyozer.github.io/images/projects/cryptochat/cryptochat_rooms.png", "https://pyozer.github.io/images/projects/cryptochat/cryptochat_addrooms.png", "https://pyozer.github.io/images/projects/cryptochat/cryptochat_room.png", "https://pyozer.github.io/images/projects/cryptochat/cryptochat_addrooms.png" ],
+    "link" : "https://github.com/Pyozer/CryptoChat",
+    "mainImage" : "https://pyozer.github.io/images/projects/cryptochat/cryptochat_logo.png",
+    "order" : 7,
+    "subtitle" : "Application de chat crypté",
+    "title" : "CryptoChat"
+  }, {
+    "category" : "android",
+    "description" : [ "TicTacToe est un jeu Android se jouant à 2. Ce projet avait pour but de découvrir l'aspect Bluetooth avec une application Android.", "Le but du jeu est donc d'aligner 3 symbole sur la diagonal, ou sur une ligne" ],
+    "id" : "tictactoe",
+    "images" : [ "https://pyozer.github.io/images/projects/tictactoe/tictactoe_home.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_bluetooth_connect.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_game1.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_game.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_win.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_newgame.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_bluetooth_visibility.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_stats.png", "https://pyozer.github.io/images/projects/tictactoe/tictactoe_params.png" ],
+    "mainImage" : "https://pyozer.github.io/images/projects/tictactoe/tictactoe_logo.png",
+    "order" : 8,
+    "subtitle" : "Jeu du TicTacToe",
+    "title" : "TicTacToe"
+  }, {
+    "category" : "android",
+    "description" : [ "Keskonsmar est un projet réalisé avec un amis. C'est une application Android avec Firebase pour avoir une gestion des connexions avec Google ou avec un simple identifiant et mot de passe, mais aussi pour avoir une base de données en temps réel.", "L'objectif de cette application est de pouvoir partager des jeux de mots ou blagues. Un système de vote est présent afin de pouvoir mettre en avant certaines publications." ],
+    "id" : "keskonsmar",
+    "link" : "https://github.com/Pyozer/Keskonsmar",
+    "mainImage" : "https://pyozer.github.io/images/projects/keskonsmar/keskonsmar_logo.png",
+    "order" : 8,
+    "subtitle" : "Application de blagues et jeux de mots",
+    "title" : "Keskonsmar"
+  }, {
+    "category" : "software",
+    "description" : [ "Ce projet a été réalisé avec 4 autres personnes lors d'un projet tuteuré (sujet imposé). Le but étant de créer un logiciel de gestion d'une entreprise de travaux agricoles.", "Différentes fonctionnalités sont présentes, comme notamment la gestion des machines agricoles, des champs, attribuer une machine à un champs ou encore le calcule d'itinéraires", "Ce logiciel a été réalisé avec JavaFX et possède une base de données MySQL" ],
+    "id" : "farmsimulator",
+    "link" : "https://github.com/Pyozer/FarmSimulator",
+    "mainImage" : "https://pyozer.github.io/images/projects/farmsimulator/farmsimulator_logo.png",
+    "order" : 9,
+    "subtitle" : "Logiciel de gestion d'une ETA",
+    "title" : "FarmSimulator"
+  }, {
+    "category" : "Web",
+    "description" : [ "CodeCliquer est un jeu inspiré du fameux CookieClicker, mais version développement informatique. Le but étant de cliquer une maximum de fois sur un clavier (affiché sur le site), afin d'avoir un certains nombre de lignes de code.", "Ensuite, le joueur pourra acheter avec ces lignes de codes des items, qui se chargeront d'écrire des lignes de code à place. Plusieurs items sont disponibles et ont chacun un nombre de lignes de code par secondes différents.", "Ce jeu a été réalisé lors d'un projet l'IUT avec Node.JS" ],
+    "id" : "codeclicker",
+    "images" : [ "https://pyozer.github.io/images/projects/codeclicker/codeclicker_pseudo.png", "https://pyozer.github.io/images/projects/codeclicker/codeclicker_game.png", "https://pyozer.github.io/images/projects/codeclicker/codeclicker_game2.png" ],
+    "link" : "https://github.com/Pyozer/CodeClicker",
+    "mainImage" : "https://code.ricalo.com/images/site-logo.png",
+    "order" : 10,
+    "subtitle" : "Jeu inspiré du CookieClicker",
+    "title" : "CodeClicker"
+  } ],
+  "projects_category" : [ {
+    "category" : "",
+    "title" : "All"
+  }, {
+    "category" : "web",
+    "title" : "Web"
+  }, {
+    "category" : "android",
+    "title" : "Android"
+  }, {
+    "category" : "ios",
+    "title" : "iOS"
+  }, {
+    "category" : "software",
+    "title" : "Logiciel"
+  } ],
+  "skills" : [ {
+    "items" : [ {
+      "image" : "https://pyozer.github.io/images/skills/debian.png",
+      "name" : "Debian",
+      "percent" : 65
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/archlinux.png",
+      "name" : "ArchLinux",
+      "percent" : 60
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/alpine.png",
+      "name" : "Alpine",
+      "percent" : 15
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/raspbian.png",
+      "name" : "Raspbian",
+      "percent" : 70
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/windows.png",
+      "name" : "Windows",
+      "percent" : 85
+    } ],
+    "order" : 4,
+    "title" : "Operating Systems"
+  }, {
+    "items" : [ {
+      "image" : "https://pyozer.github.io/images/skills/java.svg",
+      "name" : "Java",
+      "percent" : 80
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/android.png",
+      "name" : "Android",
+      "percent" : 70
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/swift.png",
+      "name" : "Swift",
+      "percent" : 25
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/cpp.png",
+      "name" : "C++",
+      "percent" : 25
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/html.png",
+      "name" : "HTML",
+      "percent" : 80
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/css.svg",
+      "name" : "CSS",
+      "percent" : 75
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/js.png",
+      "name" : "JavaScript",
+      "percent" : 70
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/php.svg",
+      "name" : "PHP",
+      "percent" : 80
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/mysql.png",
+      "name" : "MySQL",
+      "percent" : 75
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/plsql.png",
+      "name" : "PL/SQL",
+      "percent" : 60
+    } ],
+    "order" : 1,
+    "title" : "Languages"
+  }, {
+    "items" : [ {
+      "image" : "https://pyozer.github.io/images/skills/intellij.png",
+      "name" : "Intellij",
+      "percent" : 80
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/androidstudio.png",
+      "name" : "Android Studio",
+      "percent" : 75
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/vscode.png",
+      "name" : "Visual Studio Code",
+      "percent" : 70
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/putty.png",
+      "name" : "PuTTY",
+      "percent" : 80
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/filezilla.png",
+      "name" : "Filezilla",
+      "percent" : 90
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/gitextensions.svg",
+      "name" : "Git Extension",
+      "percent" : 60
+    } ],
+    "order" : 3,
+    "title" : "Softwares"
+  }, {
+    "items" : [ {
+      "image" : "https://pyozer.github.io/images/skills/bootstrap4.png",
+      "name" : "Bootstrap 4",
+      "percent" : 80
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/jquery.png",
+      "name" : "jQuery",
+      "percent" : 65
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/react.png",
+      "name" : "React",
+      "percent" : 65
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/react.png",
+      "name" : "React Native",
+      "percent" : 7
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/angular.png",
+      "name" : "Angular",
+      "percent" : 20
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/npm.png",
+      "name" : "NPM",
+      "percent" : 75
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/nodejs.png",
+      "name" : "Node.JS",
+      "percent" : 65
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/express.svg",
+      "name" : "Express",
+      "percent" : 55
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/mongodb.png",
+      "name" : "MongoDB",
+      "percent" : 35
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/firebase.png",
+      "name" : "Firebase",
+      "percent" : 60
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/git.png",
+      "name" : "Git",
+      "percent" : 65
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/socketio.svg",
+      "name" : "Socket.IO",
+      "percent" : 85
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/docker.png",
+      "name" : "Docker",
+      "percent" : 55
+    }, {
+      "image" : "https://pyozer.github.io/images/skills/jenkins.png",
+      "name" : "Jenkins",
+      "percent" : 50
+    } ],
+    "order" : 2,
+    "title" : "Frameworks & Tools"
+  } ],
+  "website_open" : true
+}
