@@ -36,7 +36,7 @@ class Skills extends Component {
 }
 
 const SkillCategory = ({title, data}) => {
-    data.sort((a, b) => (a.order - b.order));
+    data.sort((a, b) => (b.percent - a.percent));
     return (
         <div>
             <h3 className="mt-5 mb-4 text-capitalize">{title}</h3>
