@@ -14,7 +14,7 @@ const About = () => (
         </p>
         <p className="lead text-justify">
             Je poursuis mes études avec une formation de <Badge>Concepteur Développeur</Badge> spécialité Mobile à Efreitech, une école situé à Villejuif (94), en <Badge>alternance</Badge> sur 2 ans.
-            Cette formation m'attire particulièrement car elle offre une formation en alternance et propose des cours très centrés sur le développement <Badge>mobile</Badge> et <Badge>web</Badge>.
+            Cette formation m'attire particulièrement car elle offre une formation en alternance et propose des cours très axés sur le développement <Badge>mobile</Badge> et <Badge>web</Badge>.
         </p>
         <p className="lead text-justify">
             J'adore apprendre de nouvelles <Badge>technologies</Badge>, afin de rester en <Badge>veille permanente</Badge>, ce qui est très important dans le monde de l'informatique, car tout <Badge>évolue</Badge> très rapidement !
