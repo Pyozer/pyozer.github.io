@@ -1,10 +1,8 @@
 import React from 'react';
 
-import imgSrc from '../../assets/img_profil.png';
-
 const ImageProfil = (props) => (
     <img
-        src={imgSrc}
+        src="https://avatars1.githubusercontent.com/u/16879166"
         alt={props.alt || "Jean-Charles Moussé"}
         {...props} />
 );
