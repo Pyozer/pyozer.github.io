@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 
 import ContainerTitle from '../components/ui/ContainerTitle';
 import ButtonSubmit from '../components/ui/ButtonSubmit';
@@ -55,7 +55,7 @@ class Project extends React.Component {
                 </div>
 
                 { project.link && 
-                    <a href={project.link} target="_blank">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
                         <ButtonSubmit type="button">
                             More info <FontAwesomeIcon icon={["fas", "external-link-alt"]} size="sm" className="ml-2" />
                         </ButtonSubmit>

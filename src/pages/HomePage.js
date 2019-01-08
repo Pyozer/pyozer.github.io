@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ImageProfil from '../components/images/ImageProfil';
 
 import Typist from 'react-typist';
@@ -10,11 +10,11 @@ import CenterElement from '../components/CenterElement';
 import { withTitle } from '../Context';
 
 class HomePage extends Component {
-    
+
     state = {
         renderMsg: false,
     }
-    
+
     onHeaderTyped = () => {
         this.setState({ renderMsg: true });
     }
@@ -24,16 +24,16 @@ class HomePage extends Component {
             <CenterElement className="mt-3 mt-md-5 p-5">
                 <div className="text-center">
                     <ImageProfil className="rounded-circle shadow" width="160" />
-                    
+
                     <h1 className="display-4 mt-4">
                         Hi, I'm
                         <br />
-                        <Typist startDelay={1000} onTypingDone={this.onHeaderTyped} cursor={{element: "|||||"}} className="text-primary">
+                        <Typist startDelay={1000} onTypingDone={this.onHeaderTyped} cursor={{ element: "|||||" }} className="text-primary">
                             <strong className="font-weight-bold">Jean-Charles Moussé</strong>
                         </Typist>
                     </h1>
                     <p className="lead mt-4">
-                        I have a large interest in programming and I love to apply my skills to my personal projects.     
+                        I have a large interest in programming and I love to apply my skills to my personal projects.
                     </p>
 
                     <div className="mt-5 d-flex justify-content-between social_link">

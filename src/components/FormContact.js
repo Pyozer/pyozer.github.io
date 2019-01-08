@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TextAreaOutline from './ui/TextAreaOutline';
 import TextInputOutline from './ui/TextInputOutline';
 import ButtonSubmit from './ui/ButtonSubmit';
@@ -10,13 +10,13 @@ class FormContact extends Component {
 
     render() {
         const isSendSuccess = this.props.location.search.indexOf('email=sended') !== -1; // Si il y a le paramètre
- 
+
         return (
             <form {...this.props} action="https://formspree.io/jeancharles.msse@gmail.com" method="POST">
-                {isSendSuccess === true &&  
+                {isSendSuccess === true &&
                     <div className="mb-5 alert alert-success" role="alert">
                         Your message has been successfully send.
-                        <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={(e) => {this.props.location.search = ""; this.setState({isSendSuccess: false})}}>
+                        <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={(e) => { this.props.location.search = ""; this.setState({ isSendSuccess: false }) }}>
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -35,7 +35,7 @@ class FormContact extends Component {
                     <TextAreaOutline className="col-12" type="text" name="message" id="inputMessage" placeholder="Write your message..." label="Message" required />
                 </div>
                 <ButtonSubmit className="py-3">
-                    Send message <FontAwesomeIcon icon={["fab", "telegram-plane"]} className="ml-2"/>
+                    Send message <FontAwesomeIcon icon={["fab", "telegram-plane"]} className="ml-2" />
                 </ButtonSubmit>
                 <input type="hidden" name="_next" value="https://pyozer.github.io/contact?email=sended" />
             </form>

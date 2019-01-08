@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 import TextInputOutline from '../components/ui/TextInputOutline';
 import firebase from '../api/firebase';
 import ButtonSubmit from '../components/ui/ButtonSubmit';
